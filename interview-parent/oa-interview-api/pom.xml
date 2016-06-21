@@ -16,4 +16,11 @@
     <properties>
         <bundle.symbolicName>com.kalix.oa.interview.api</bundle.symbolicName>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kalix.oa.interview</groupId>
+            <artifactId>oa-interview-entities</artifactId>
+        </dependency>
+    </dependencies>
 </project>
