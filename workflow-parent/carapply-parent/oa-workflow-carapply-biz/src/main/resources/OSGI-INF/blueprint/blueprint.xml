@@ -1,0 +1,25 @@
+<blueprint xmlns:jpa="http://aries.apache.org/xmlns/jpa/v2.0.0"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.2.0"
+           default-activation="eager"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <jpa:enable/>
+    <tx:enable-annotations/>
+    <reference id="shiroService" interface="com.kalix.framework.core.api.security.IShiroService"/>
+    <reference id="identityService" interface="org.activiti.engine.IdentityService"/>
+    <reference id="runtimeService" interface="org.activiti.engine.RuntimeService"/>
+    <reference id="taskService" interface="org.activiti.engine.TaskService"/>
+
+    <reference id="carApplyBeanDao" interface="com.kalix.oa.workflow.carapply.api.dao.ICarApplyBeanDao"/>
+
+    <bean id="carApplyBeanService" class="com.kalix.oa.workflow.carapply.biz.CarApplyBeanServiceImpl">
+        <tx:transaction method="*" value="Required"/>
+        <property name="dao" ref="carApplyBeanDao"/>
+        <property name="shiroService" ref="shiroService"/>
+        <property name="identityService" ref="identityService"/>
+        <property name="runtimeService" ref="runtimeService"/>
+        <property name="taskService" ref="taskService"/>
+    </bean>
+    <service interface="com.kalix.oa.workflow.carapply.api.biz.ICarApplyBeanService" ref="carApplyBeanService"/>
+
+</blueprint>
+

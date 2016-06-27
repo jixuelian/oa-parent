@@ -3,10 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>interview-parent</module>
-    </modules>
-
     <parent>
         <groupId>com.kalix</groupId>
         <artifactId>kalix-parent</artifactId>
@@ -18,6 +14,12 @@
     <name>Kalix OA Parent</name>
     <packaging>pom</packaging>
 
+    <modules>
+        <!--<module>interview-parent</module>-->
+        <module>core-parent</module>
+        <module>workflow-parent</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -26,6 +28,12 @@
                 <version>${globle.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kalix.middleware.workflow</groupId>
+                <artifactId>middleware-workflow-biz</artifactId>
+                <version>${globle.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
