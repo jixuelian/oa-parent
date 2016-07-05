@@ -1,0 +1,14 @@
+package com.kalix.oa.workflow.employapply.api.biz;
+
+
+import com.kalix.framework.core.api.persistence.JsonData;
+import com.kalix.middleware.workflow.api.biz.IWorkflowBizService;
+import com.kalix.oa.workflow.employapply.entities.EmployApplyBean;
+
+/**
+ * @author sunlf
+ */
+public interface IEmployApplyBeanService extends IWorkflowBizService<EmployApplyBean> {
+      final String PROCESS_KEY_NAME="employapply";
+      JsonData getAllEntityByQuery(int page, int limit, String jsonStr);
+}
