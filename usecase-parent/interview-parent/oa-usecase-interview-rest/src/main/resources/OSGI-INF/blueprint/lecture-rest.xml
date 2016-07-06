@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+    <reference id="lectureService" interface="com.kalix.oa.usecase.interview.api.biz.ILectureBeanService"/>
+    <camelContext id="lectureCamel" xmlns="http://camel.apache.org/schema/blueprint">
+        <restConfiguration component="servlet" bindingMode="json">
+            <dataFormatProperty key="prettyPrint" value="true"/>
+        </restConfiguration>
+
+        <!-- defines the rest services using the context-path /lecture -->
+        <rest path="/lectures" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <description>lecture rest service</description>
+
+            <!-- this is a rest GET to find all lecture -->
+            <get id="route-getAllLecture" outType="com.kalix.framework.core.api.persistence.JsonData">
+                <description>Find all Lectures</description>
+                <to uri="bean:lectureService?method=getAllEntityByQuery(${header.page},${header.limit},${header.jsonStr})"/>
+            </get>
+
+            <!-- this is a rest POST to create a lecture -->
+            <post id="route-addLecture" type="com.kalix.oa.usecase.interview.entities.LectureBean"
+                  outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Create a Lecture</description>
+                <to uri="bean:lectureService?method=saveEntity"/>
+            </post>
+
+            <!-- this is a rest GET to view a lecture by the given id -->
+            <get uri="/{id}" id="route-getLecture" outType="com.kalix.oa.usecase.interview.entities.LectureBean">
+                <description>Find Lecture by id</description>
+                <to uri="bean:lectureService?method=getEntity(${header.id})"/>
+            </get>
+
+            <!-- this is a rest PUT to update a lecture -->
+            <put uri="/{id}" id="route-updateLecture" type="com.kalix.oa.usecase.interview.entities.LectureBean"
+                 outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Updates a Lecture</description>
+                <to uri="bean:lectureService?method=updateEntity"/>
+            </put>
+
+            <!-- this is a rest DELETE to delete a lecture -->
+            <delete uri="/{id}" id="route-deleteLecture"
+                    outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Delete a Lecture</description>
+                <to uri="bean:lectureService?method=deleteEntity(${header.id})"/>
+            </delete>
+        </rest>
+    </camelContext>
+</blueprint>

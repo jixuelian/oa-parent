@@ -1,0 +1,23 @@
+<blueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+
+    <reference id="shiroService" interface="com.kalix.framework.core.api.security.IShiroService"/>
+    <reference id="interviewBeanDao" interface="com.kalix.oa.usecase.interview.api.dao.IInterviewBeanDao"/>
+    <reference id="lectureBeanDao" interface="com.kalix.oa.usecase.interview.api.dao.ILectureBeanDao"/>
+    <bean id="interviewBeanServiceImpl" class="com.kalix.oa.usecase.interview.biz.InterviewBeanServiceImpl">
+        <property name="shiroService" ref="shiroService"/>
+        <property name="dao" ref="interviewBeanDao"/>
+    </bean>
+    <bean id="lectureBeanServiceImpl" class="com.kalix.oa.usecase.interview.biz.LectureBeanServiceImpl">
+        <property name="shiroService" ref="shiroService"/>
+        <property name="dao" ref="lectureBeanDao"/>
+    </bean>
+    <service id="interviewBeanService" interface="com.kalix.oa.usecase.interview.api.biz.IInterviewBeanService"
+             ref="interviewBeanServiceImpl">
+    </service>
+    <service id="lectureBeanService" interface="com.kalix.oa.usecase.interview.api.biz.ILectureBeanService"
+             ref="lectureBeanServiceImpl">
+    </service>
+</blueprint>
+

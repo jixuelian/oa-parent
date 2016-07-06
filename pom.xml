@@ -15,9 +15,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--<module>interview-parent</module>-->
         <module>core-parent</module>
         <module>workflow-parent</module>
+        <!--<module>candidate-parent</module>-->
+        <module>usecase-parent</module>
     </modules>
 
     <dependencyManagement>

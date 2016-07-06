@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+    <reference id="employApplyService" interface="com.kalix.oa.workflow.employapply.api.biz.IEmployApplyBeanService"/>
+
+    <camelContext id="oa-employapply-rest" xmlns="http://camel.apache.org/schema/blueprint">
+        <restConfiguration component="servlet" bindingMode="json">
+            <dataFormatProperty key="prettyPrint" value="true"/>
+        </restConfiguration>
+        <rest path="/employapplys" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <get id="route-getAllEmployApply" outType="com.kalix.framework.core.api.persistence.JsonData">
+                <description>Find all employApplys</description>
+                <to uri="bean:employApplyService?method=getAllEntityByQuery(${header.page},${header.limit},${header.jsonStr})"/>
+            </get>
+            <post id="route-addEmployApply" type="com.kalix.oa.workflow.employapply.entities.EmployApplyBean"
+                  outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Create a EmployApply</description>
+                <to uri="bean:employApplyService?method=saveEntity"/>
+            </post>
+        </rest>
+        <rest path="/employapplys/{id}" consumes="application/json;charset=utf-8"
+              produces="application/json;charset=utf-8">
+            <get id="route-getEmployApply" outType="com.kalix.oa.workflow.employapply.entities.EmployApplyBean">
+                <description>Find employApply by id</description>
+                <to uri="bean:employApplyService?method=getEntity(${header.id})"/>
+            </get>
+            <put id="route-updateemployApply" type="com.kalix.oa.workflow.employapply.entities.EmployApplyBean"
+                 outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Updates a employApply</description>
+                <to uri="bean:employApplyService?method=updateEntity"/>
+            </put>
+            <delete id="route-removeEmployApply"
+                    outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Delete a employApply</description>
+                <to uri="bean:employApplyService?method=deleteEntity(${header.id})"/>
+            </delete>
+        </rest>
+        <rest path="/employapplys/workflow" consumes="application/json;charset=utf-8"
+              produces="application/json;charset=utf-8">
+            <get id="route-startProcessemployApply" uri="/startProcess" outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Start Process of employApply</description>
+                <to uri="bean:employApplyService?method=startProcess(${header.id})"/>
+            </get>
+            <get id="route-completeTaskEmployApply" uri="/completeTask" outType="com.kalix.framework.core.api.persistence.JsonStatus">
+                <description>Complete Task of employApply</description>
+                <to uri="bean:employApplyService?method=completeTask(${header.taskId},${header.accepted},${header.comment})"/>
+            </get>
+        </rest>
+    </camelContext>
+</blueprint>
+
