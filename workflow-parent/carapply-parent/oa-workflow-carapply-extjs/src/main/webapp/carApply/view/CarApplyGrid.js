@@ -6,15 +6,14 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
     requires: [
         'kalix.workflow.carApply.controller.CarApplyGridController',
         'kalix.workflow.carApply.store.CarApplyStore',
-        'kalix.admin.dict.component.DictGridColumn'
+        'kalix.sys.dict.component.DictGridColumn'
     ],
     alias: 'widget.carApplyGrid',
     xtype: 'carApplyGrid',
     iconCls: 'iconfont icon-public-car',
     controller: {
         type: 'carApplyGridController',
-        storeId: 'carApplyStore',
-        cfgForm: 'kalix.workflow.carApply.view.TestCarApplyWindow',
+        cfgForm: 'kalix.workflow.carApply.view.CarApplyWindow',
         cfgViewForm: 'kalix.workflow.carApply.view.CarApplyViewWindow',
         cfgModel: 'kalix.workflow.carApply.model.CarApplyModel'
     },

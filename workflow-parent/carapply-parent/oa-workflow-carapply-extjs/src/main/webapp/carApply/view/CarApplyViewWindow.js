@@ -5,12 +5,10 @@
 Ext.define('kalix.workflow.carApply.view.CarApplyViewWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
-        'kalix.workflow.carApply.view.CarApplyViewForm',
-        'kalix.workflow.carApply.viewModel.CarApplyViewModel'
+        'kalix.workflow.carApply.view.CarApplyViewForm'
     ],
     alias: 'widget.carApplyViewWindow',
     xtype: "carApplyViewWindow",
-    viewModel: 'carApplyViewModel',
     width: 840,
     items: [
         {

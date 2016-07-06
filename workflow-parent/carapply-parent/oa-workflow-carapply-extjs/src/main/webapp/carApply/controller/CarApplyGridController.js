@@ -5,6 +5,9 @@ Ext.define('kalix.workflow.carApply.controller.CarApplyGridController', {
     extend: 'kalix.controller.BaseGridController',
     requires: ['kalix.workflow.components.ActivitiProcessImageWindow'],
     alias: 'controller.carApplyGridController',
+    mixins: {
+        attachment: 'kalix.attachment.common.mixins.Attachment'
+    },
     onWorkFlowStart: function (grid, rowIndex, colIndex) {
         var rec = grid.getStore().getAt(rowIndex);
         var postUrl;

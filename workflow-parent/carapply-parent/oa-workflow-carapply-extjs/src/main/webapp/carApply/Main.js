@@ -5,10 +5,8 @@ Ext.define('kalix.workflow.carApply.Main', {
     extend: 'kalix.container.BaseContainer',
     requires: [
         'kalix.workflow.carApply.view.CarApplyGrid',
-        'kalix.workflow.carApply.viewModel.CarApplyViewModel',
         'kalix.workflow.carApply.view.CarApplySearchForm'
     ],
-    viewModel: 'carApplyViewModel',
     storeId: 'carApplyStore',
     items: [
          {
