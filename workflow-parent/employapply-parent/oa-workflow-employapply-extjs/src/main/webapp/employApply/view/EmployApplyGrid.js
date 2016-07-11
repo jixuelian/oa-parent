@@ -6,7 +6,7 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
     requires: [
         'kalix.workflow.employApply.controller.EmployApplyGridController',
         'kalix.workflow.employApply.store.EmployApplyStore',
-        'kalix.admin.dict.component.DictGridColumn'
+        'kalix.sys.dict.component.DictGridColumn'
     ],
     alias: 'widget.employApplyGrid',
     xtype: 'employApplyGrid',
@@ -148,17 +148,18 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                 ]
             }
         ]
-    },
-    tbar: {
-        xtype: 'securityToolbar',
-        verifyItems: [
-            {
-                text: '添加',
-                xtype: 'button',
-                permission: '',
-                iconCls: 'iconfont icon-add',
-                handler: 'onAdd'
-            }
-        ]
     }
+    //,
+    //tbar: {
+    //    xtype: 'securityToolbar',
+    //    verifyItems: [
+    //        {
+    //            text: '添加',
+    //            xtype: 'button',
+    //            permission: '',
+    //            iconCls: 'iconfont icon-add',
+    //            handler: 'onAdd'
+    //        }
+    //    ]
+    //}
 });

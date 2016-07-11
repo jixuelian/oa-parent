@@ -8,7 +8,6 @@ import java.util.Date;
  * Created by zangyanming on 2016/06/21.
  */
 public class EmployApplyDTO extends BaseDTO {
-    private long id;
     private String personCategory;//人员类别
     private String department;//部门
     private String xm;//姓名
@@ -26,16 +25,6 @@ public class EmployApplyDTO extends BaseDTO {
     private String branchSchoolLeader;//分院领导审批
     private String schoolLeader;//校领导审批
     private String manpower;// 人力资源部长签字
-
-    @Override
-    public long getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getPersonCategory() {
         return personCategory;
