@@ -1,5 +1,6 @@
 package com.kalix.oa.usecase.interview.api.query;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.kalix.framework.core.api.web.model.BaseDTO;
 
 import java.util.Date;
@@ -17,19 +18,17 @@ public class InterviewDTO extends BaseDTO {
     private String position;//应聘岗位
 
     private Long candidateId;//应聘id
+    @JsonFormat(shape= JsonFormat.Shape.STRING ,pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date dateFirst;//初试时间
     private String interviewerFirst;//初试面试官
     private String interviewContentFirst;//初试面试内容
     private Boolean passFirst;// 初试是否通过
 
+    @JsonFormat(shape= JsonFormat.Shape.STRING ,pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date dateSecond;//复试时间
     private String interviewerSecond;//复试面试官
     private String interviewContentSecond;//复试面试内容
     private Boolean passSecond;// 复试是否通过
-
-    private Boolean employment;//是否聘用
-
-    private Long employApplyWorkflowId;//入职申请
 
     public String getPersonCategory() {
         return personCategory;
@@ -157,21 +156,5 @@ public class InterviewDTO extends BaseDTO {
 
     public void setPassSecond(Boolean passSecond) {
         this.passSecond = passSecond;
-    }
-
-    public Boolean getEmployment() {
-        return employment;
-    }
-
-    public void setEmployment(Boolean employment) {
-        this.employment = employment;
-    }
-
-    public Long getEmployApplyWorkflowId() {
-        return employApplyWorkflowId;
-    }
-
-    public void setEmployApplyWorkflowId(Long employApplyWorkflowId) {
-        this.employApplyWorkflowId = employApplyWorkflowId;
     }
 }

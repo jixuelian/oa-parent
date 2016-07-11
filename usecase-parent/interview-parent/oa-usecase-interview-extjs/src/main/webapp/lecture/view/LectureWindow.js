@@ -7,29 +7,56 @@
 Ext.define('kalix.usecase.lecture.view.LectureWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
-        'kalix.usecase.lecture.viewModel.LectureViewModel',
-        'kalix.controller.BaseWindowController'
+        'kalix.controller.BaseWindowController',
+        'kalix.usecase.candidate.store.CandidateStore'
     ],
     alias: 'widget.lectureWindow',
-    viewModel: 'lectureViewModel',
     controller: {
-        type: 'baseWindowController',
-        storeId: 'lectureStore'
+        type: 'baseWindowController'
     },
     xtype: "lectureWindow",
+    whichInterview: 'lecture',
     width: 400,
-    //todo 在此修改表单
+    constructor: function () {
+        this.callParent(arguments);
+        this.items.items[0].items.items[0].store.proxy.extraParams = {'header.type':this.whichInterview,'jsonStr': '', 'limit': 50};
+        this.items.items[0].items.items[0].store.proxy.url = CONFIG.restRoot + '/camel/rest/candidatescheck/' + this.whichInterview;
+    },
     items: [
         {
             xtype: 'baseForm',
             items: [
                 {
-                    fieldLabel: '应聘人',
-                    allowBlank: false,
+                    xtype: 'combobox',
+                    fieldLabel: '应聘者姓名',
+                    store: {
+                        type: 'candidateStore',
+                        //proxyUrl:'',
+                        proxy: {
+                            extraParams: {'jsonStr': '', 'limit': 50}
+                        }
+                    },
+                    autoLoad: false,
+                    editable: false,
+                    displayField: 'xm',
+                    valueField: 'candidateId',
+                    queryMode: 'remote',
                     bind: {
                         value: '{rec.candidateId}'
+                    },
+                    listeners: {
+                        select :function( combo, record, eOpts ){
+                            //Ext.MessageBox.alert(CONFIG.ALTER_TITLE_ERROR, "流程已经启动!");
+                        }
                     }
                 },
+                //{
+                //    fieldLabel: '应聘人',
+                //    allowBlank: false,
+                //    bind: {
+                //        value: '{rec.candidateId}'
+                //    }
+                //},
                 {
                     fieldLabel: '试讲题目',
                     allowBlank: false,
@@ -90,8 +117,8 @@ Ext.define('kalix.usecase.lecture.view.LectureWindow', {
                     fieldLabel: '所提问题及回答情况',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.comment}',
-                        value: '{rec.comment}'
+                        activeError: '{validation.qa}',
+                        value: '{rec.qa}'
                     }
                 },
                 {
@@ -119,21 +146,21 @@ Ext.define('kalix.usecase.lecture.view.LectureWindow', {
                     }
                 },
                 {
-                    fieldLabel: '是否聘用',
+                    fieldLabel: '是否通过',
                     allowBlank: false,
                     xtype: 'combobox',
                     editable: false,
-                    valueField: 'employment',
+                    valueField: 'pass',
                     displayField: 'name',
                     store: {
                         data: [
-                            {'name': '是', 'employment': true},
-                            {'name': '否', 'employment': false}
+                            {'name': '是', 'pass': true},
+                            {'name': '否', 'pass': false}
                         ]
                     },
                     bind: {
-                        activeError: '{validation.employment}',
-                        value: '{rec.employment}'
+                        activeError: '{validation.pass}',
+                        value: '{rec.pass}'
                     }
                 }
             ]

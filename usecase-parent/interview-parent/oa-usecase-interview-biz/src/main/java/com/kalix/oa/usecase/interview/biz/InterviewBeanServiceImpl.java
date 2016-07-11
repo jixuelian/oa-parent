@@ -39,20 +39,14 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
         Class<? extends BaseDTO> cls = getResultClass();
         Assert.notNull(cls, "返回查询结果类不能为空.");
 
-        String posSql = " order by a.creationDate desc ";
+        String posSql = " order by b.creationDate desc";
         for (Map.Entry<String, String> entry : jsonMap.entrySet()) {
-            sql = sql + " and a." + entry.getKey() + " like '%" + entry.getValue() + "%'";
-        }
-
-        JsonData jsonData = dao.findByNativeSql(sql + posSql, page, limit, cls, null);
-        List<InterviewDTO> list = jsonData.getData();
-        for (InterviewDTO pe:list) {
-            if(pe.getId()==null){
-                pe.setId(0L);
+            if(entry.getValue() != null && !entry.getValue().equals("")) {
+                sql = sql + " and b." + entry.getKey() + " = " + entry.getValue();
             }
         }
 
-        return jsonData;
+        return dao.findByNativeSql(sql + posSql, page, limit, cls, null);
     }
 
     @Override
@@ -73,13 +67,26 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
                 "b.datesecond," +
                 "b.interviewersecond," +
                 "b.interviewcontentsecond," +
-                "b.passsecond," +
-                "b.employment" +
-                " from oa_candidate a left join oa_interview b on  a.id = b.candidateid and (a.personcategory='1' or a.personcategory='2') ";
+                "b.passsecond" +
+                " from oa_candidate a , oa_interview b where a.id = b.candidateid and (a.personcategory='1' or a.personcategory='2') ";
     }
 
     @Override
     protected Class<? extends BaseDTO> getResultClass() {
         return InterviewDTO.class;
+    }
+
+
+    @Override
+    public JsonStatus saveEntity(InterviewBean entity){
+        if(entity.getWhichInterview() != null && entity.getWhichInterview().equals("review")){
+            List<PersistentEntity> list = dao.find("select ob from InterviewBean ob where ob.candidateId=?1",entity.getCandidateId());
+            if(list != null && list.size()>0){
+                entity.setId(list.get(0).getId());
+                return super.updateEntity(entity);
+            }
+        }
+
+        return super.saveEntity(entity);
     }
 }

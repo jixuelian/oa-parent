@@ -13,7 +13,6 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
     xtype: 'lectureGridPanel',
     controller: {
         type: 'lectureGridController',
-        storeId: 'lectureStore',
         cfgForm: 'kalix.usecase.lecture.view.LectureWindow',
         cfgViewForm: 'kalix.usecase.lecture.view.LectureViewWindow',
         cfgModel: 'kalix.usecase.lecture.model.LectureModel'
@@ -41,7 +40,12 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
             },
             {
                 text: '应聘人',
-                dataIndex: 'candidateId'
+                dataIndex: 'candidateId',
+                hidden: true
+            },
+            {
+                text: '应聘者姓名',
+                dataIndex: 'xm'
             },
             {
                 text: '所在部门',
@@ -81,7 +85,14 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
                         permission: '',
                         tooltip: '编辑',
                         handler: 'onEdit'
-                    }, {
+                        //getClass: function (v, meta, record) {
+                        //    if (record.data.employment == true) {
+                        //        return "kalix_hidden";
+                        //    }
+                        //    return "iconfont icon-edit-column";
+                        //}
+                    },
+                    {
                         iconCls: 'iconfont icon-delete',
                         permission: '',
                         tooltip: '删除',

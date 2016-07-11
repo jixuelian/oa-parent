@@ -26,23 +26,19 @@ Ext.define('kalix.usecase.interview.model.InterviewModel', {
             name: 'passFirst'
         },
         {
-            name: 'dateSecond',
-            type: 'date',
-            dateFormat: 'Y-m-d'
+            name: 'dateSecond'
         },
         {
             name: 'interviewerSecond'
         },
         {
-            name: 'interviewContentSecond',
-            type: 'date',
-            dateFormat: 'Y-m-d'
+            name: 'interviewContentSecond'
         },
         {
             name: 'passSecond'
         },
         {
-            name: 'employment'
+            name: 'whichInterview'
         }
     ]
 });

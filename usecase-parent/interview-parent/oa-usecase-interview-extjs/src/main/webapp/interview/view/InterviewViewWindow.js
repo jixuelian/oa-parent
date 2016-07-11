@@ -21,12 +21,22 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
             xtype: 'baseForm',
             items: [
                 {
-                    fieldLabel: '应聘人',
+                    //readOnly:true,
+                    xtype: 'candidateComboBox',
+                    fieldLabel: '应聘者姓名',
+                    name:'candidateId',
                     allowBlank: false,
                     bind: {
                         value: '{rec.candidateId}'
                     }
                 },
+                //{
+                //    fieldLabel: '应聘人',
+                //    allowBlank: false,
+                //    bind: {
+                //        value: '{rec.candidateId}'
+                //    }
+                //},
                 {
                     fieldLabel: '初试时间',
                     allowBlank: false,
@@ -38,7 +48,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     fieldLabel: '初试面试官',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.interviewerFirst}',
                         value: '{rec.interviewerFirst}'
                     }
                 },
@@ -47,7 +56,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     allowBlank: false,
                     xtype: 'textarea',
                     bind: {
-                        activeError: '{validation.interviewContentFirst}',
                         value: '{rec.interviewContentFirst}'
                     }
                 },
@@ -55,7 +63,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     fieldLabel: '初试是否通过',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.passFirst}',
                         value: '{rec.passFirst}'
                     }
                 },
@@ -63,7 +70,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     fieldLabel: '复试时间',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.dateSecond}',
                         value: '{rec.dateSecond}'
                     }
                 },
@@ -71,7 +77,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     fieldLabel: '复试面试官',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.interviewerSecond}',
                         value: '{rec.interviewerSecond}'
                     }
                 },
@@ -80,7 +85,6 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     allowBlank: false,
                     xtype: 'textarea',
                     bind: {
-                        activeError: '{validation.interviewContentSecond}',
                         value: '{rec.interviewContentSecond}'
                     }
                 },
@@ -88,16 +92,7 @@ Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
                     fieldLabel: '复试是否通过',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.passSecond}',
                         value: '{rec.passSecond}'
-                    }
-                },
-                {
-                    fieldLabel: '是否聘用',
-                    allowBlank: false,
-                    bind: {
-                        activeError: '{validation.employment}',
-                        value: '{rec.employment}'
                     }
                 }
             ]

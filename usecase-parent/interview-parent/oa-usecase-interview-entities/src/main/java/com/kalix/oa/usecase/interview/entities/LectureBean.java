@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "oa_lecture")
 public class LectureBean extends PersistentEntity {
-    private long candidateId;//应聘id
+    private Long candidateId;//应聘id
     private String subject;//试讲题目
     private String content;//授课内容
     private Float argumentScore;//教学论点分数
@@ -24,13 +24,12 @@ public class LectureBean extends PersistentEntity {
     private String comment;//评语
     private String suggestion;//聘用意见
     private String participant;//听课人
-    private Boolean employment;//是否聘用
-
-    public long getCandidateId() {
+    private Boolean pass;// 是否通过
+    public Long getCandidateId() {
         return candidateId;
     }
 
-    public void setCandidateId(long candidateId) {
+    public void setCandidateId(Long candidateId) {
         this.candidateId = candidateId;
     }
 
@@ -122,12 +121,11 @@ public class LectureBean extends PersistentEntity {
         this.participant = participant;
     }
 
-    public Boolean getEmployment() {
-        return employment;
+    public Boolean getPass() {
+        return pass;
     }
 
-    public void setEmployment(Boolean employment) {
-        this.employment = employment;
+    public void setPass(Boolean pass) {
+        this.pass = pass;
     }
-
 }

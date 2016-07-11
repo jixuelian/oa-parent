@@ -7,11 +7,7 @@
 
 Ext.define('kalix.usecase.lecture.view.LectureViewWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
-    requires: [
-        'kalix.usecase.lecture.viewModel.LectureViewModel'
-    ],
     alias: 'widget.lectureViewWindow',
-    viewModel: 'lectureViewModel',
     xtype: "lectureViewWindow",
     width: 400,
     //todo 在此修改查看字段
@@ -21,12 +17,22 @@ Ext.define('kalix.usecase.lecture.view.LectureViewWindow', {
             xtype: 'baseForm',
             items: [
                 {
-                    fieldLabel: '应聘人',
+                    //readOnly:true,
+                    xtype: 'candidateComboBox',
+                    fieldLabel: '试讲姓名',
+                    name:'candidateId',
                     allowBlank: false,
                     bind: {
                         value: '{rec.candidateId}'
                     }
                 },
+                //{
+                //    fieldLabel: '应聘人',
+                //    allowBlank: false,
+                //    bind: {
+                //        value: '{rec.candidateId}'
+                //    }
+                //},
                 {
                     fieldLabel: '试讲题目',
                     allowBlank: false,
@@ -116,11 +122,11 @@ Ext.define('kalix.usecase.lecture.view.LectureViewWindow', {
                     }
                 },
                 {
-                    fieldLabel: '是否聘用',
+                    fieldLabel: '是否通过',
                     allowBlank: false,
                     bind: {
-                        activeError: '{validation.employment}',
-                        value: '{rec.employment}'
+                        activeError: '{validation.pass}',
+                        value: '{rec.pass}'
                     }
                 }
             ]

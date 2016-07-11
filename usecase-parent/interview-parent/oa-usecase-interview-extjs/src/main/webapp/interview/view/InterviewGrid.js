@@ -43,7 +43,8 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                 text: 'candidateId',
                 dataIndex: 'candidateId',
                 hidden: true
-            },{
+            },
+            {
                 text: '应聘者姓名',
                 dataIndex: 'xm'
             },
@@ -94,14 +95,6 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                 renderer: null
             },
             {
-                text: '是否聘用',
-                trueText: '是',
-                falseText: '否',
-                xtype: 'booleancolumn',
-                dataIndex: 'employment',
-                renderer: null
-            },
-            {
                 xtype: 'securityGridColumnCommon',
                 items: [
                     {
@@ -113,15 +106,27 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                     {
                         iconCls:'iconfont icon-edit-column',
                         permission: '',
-                        tooltip: '初试',
-                        handler: 'onClick'
-                    },
-                    {
-                        iconCls:'iconfont icon-edit-column',
-                        permission: '',
-                        tooltip: '复试',
+                        tooltip: '面试',
                         handler: 'onEdit'
+                        //getClass: function (v, meta, record) {
+                        //    if (record.data.personCategory == 3 || record.data.passFirst == true) {
+                        //        return "kalix_hidden";
+                        //    }
+                        //    return "iconfont icon-edit-column";
+                        //}
                     },
+                    //{
+                    //    iconCls:'iconfont icon-edit-column',
+                    //    permission: '',
+                    //    tooltip: '复试',
+                    //    handler: 'onEdit',
+                    //    getClass: function (v, meta, record) {
+                    //        if (record.data.personCategory > 1 || record.data.passSecond == true) {
+                    //            return "kalix_hidden";
+                    //        }
+                    //        return "iconfont icon-edit-column";
+                    //    }
+                    //},
                     {
                         iconCls:'iconfont icon-delete',
                         permission: '',
@@ -129,6 +134,27 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                         handler: 'onDelete'
                     }
                 ]
+            }
+        ]
+    },
+    tbar: {
+        xtype: 'securityToolbar',
+        verifyItems: [
+            {
+                text: '面试',
+                xtype: 'button',
+                //todo change permission
+                iconCls:'iconfont icon-add',
+                permission: '',
+                handler: 'onInterviewOne'
+            },
+            {
+                text: '复试',
+                xtype: 'button',
+                //todo change permission
+                iconCls:'iconfont icon-add',
+                permission: '',
+                handler: 'onInterviewTwo'
             }
         ]
     }

@@ -47,10 +47,7 @@ Ext.define('kalix.usecase.lecture.model.LectureModel', {
             name: 'participant'
         },
         {
-            name: 'employment'
-        },
-        {
-            name: 'employApplyWorkflowId'
+            name: 'pass'
         }
     ]
 });

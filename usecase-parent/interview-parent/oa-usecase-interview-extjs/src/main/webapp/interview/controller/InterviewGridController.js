@@ -23,5 +23,41 @@ Ext.define('kalix.usecase.interview.controller.InterviewGridController', {
         }else{
             this.onEdit(grid,rowIndex,colIndex);
         }
+    },
+
+    onInterviewOne:function(){
+        var grid = this.getView();
+        var viewModel = this.getViewModel();
+        var view = Ext.create(this.cfgForm,{whichInterview:'first'});
+        view.items.items[0].items.items[5].hidden = true;
+        view.items.items[0].items.items[6].hidden = true;
+        view.items.items[0].items.items[7].hidden = true;
+        view.items.items[0].items.items[8].hidden = true;
+
+
+        var vm = view.lookupViewModel();
+
+        vm.set('rec', Ext.create(this.cfgModel));
+        vm.set('iconCls', vm.get('addIconCls'));
+        vm.set('title', vm.get('addTitle'));
+        view.show();
+    },
+
+    onInterviewTwo:function(){
+        var viewModel = this.getViewModel();
+        var view = Ext.create(this.cfgForm,{whichInterview:'second'});
+        view.items.items[0].items.items[1].hidden = true;
+        view.items.items[0].items.items[2].hidden = true;
+        view.items.items[0].items.items[3].hidden = true;
+        view.items.items[0].items.items[4].hidden = true;
+
+        //var selModel = grid.getStore().getData().items[rowIndex];
+        var selModel = Ext.create(this.cfgModel);
+        selModel.set('whichInterview','review');
+        var vm = view.lookupViewModel();
+        vm.set('rec', selModel);
+        vm.set('iconCls', vm.get('editIconCls'));
+        vm.set('title',vm.get('editTitle'));
+        view.show();
     }
 });

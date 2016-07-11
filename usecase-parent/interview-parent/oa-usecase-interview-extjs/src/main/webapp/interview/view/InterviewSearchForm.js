@@ -6,16 +6,17 @@
 Ext.define('kalix.usecase.interview.view.InterviewSearchForm', {
     extend: 'kalix.view.components.common.BaseSearchForm',
     alias: 'widget.interviewSearchForm',
+    requires:[
+        'kalix.usecase.candidate.component.CandidateComboBox'
+    ],
     xtype: 'interviewSearchForm',
     storeId: 'interviewStore',
     items: [
         {
-            xtype: 'textfield',
+            xtype: 'candidateComboBox',
             fieldLabel: '应聘者姓名',
-            labelAlign: 'right',
-            labelWidth: 80,
-            width: 200,
-            name: 'xm'
+            allowBlank: true,
+            name:'candidateId'
         }
     ]
 });
