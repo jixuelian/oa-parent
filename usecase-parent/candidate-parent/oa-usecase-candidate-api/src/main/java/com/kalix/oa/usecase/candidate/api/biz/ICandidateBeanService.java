@@ -2,6 +2,7 @@ package com.kalix.oa.usecase.candidate.api.biz;
 
 
 import com.kalix.framework.core.api.biz.IBizService;
+import com.kalix.framework.core.api.persistence.JsonData;
 import com.kalix.oa.usecase.candidate.entities.CandidateBean;
 
 /**
@@ -14,4 +15,5 @@ import com.kalix.oa.usecase.candidate.entities.CandidateBean;
  */
 public interface ICandidateBeanService extends IBizService<CandidateBean> {
     //在此添加新的业务方法
+    JsonData getAllEntityByCheck(String type);
 }

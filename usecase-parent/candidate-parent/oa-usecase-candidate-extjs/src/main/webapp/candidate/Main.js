@@ -8,11 +8,8 @@ Ext.define('kalix.usecase.candidate.Main', {
     extend: 'kalix.container.BaseContainer',
     requires: [
         'kalix.usecase.candidate.view.CandidateGrid',
-        'kalix.usecase.candidate.view.CandidateSearchForm',
-        'kalix.usecase.candidate.viewModel.CandidateViewModel'
+        'kalix.usecase.candidate.view.CandidateSearchForm'
     ],
-    storeId: 'candidateStore',
-    viewModel: 'candidateViewModel',
     items: [
         {
             title: '应聘人员查询',

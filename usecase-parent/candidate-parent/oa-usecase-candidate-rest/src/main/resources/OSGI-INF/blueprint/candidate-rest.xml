@@ -46,5 +46,12 @@
                 <to uri="bean:candidateService?method=deleteEntity(${header.id})"/>
             </delete>
         </rest>
+        <rest path="/candidatescheck" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <!-- this is a rest GET to find all candidate -->
+            <get uri="/{type}" id="route-getAllCandidateCheck" outType="com.kalix.framework.core.api.persistence.JsonData">
+                <description>Find all Candidates</description>
+                <to uri="bean:candidateService?method=getAllEntityByCheck(${header.type})"/>
+            </get>
+        </rest>
     </camelContext>
 </blueprint>
