@@ -5,10 +5,8 @@ Ext.define('kalix.workflow.employApply.Main', {
     extend: 'kalix.container.BaseContainer',
     requires: [
         'kalix.workflow.employApply.view.EmployApplyGrid',
-        'kalix.workflow.employApply.viewModel.EmployApplyViewModel',
         'kalix.workflow.employApply.view.EmployApplySearchForm'
     ],
-    viewModel: 'employApplyViewModel',
     storeId: 'employApplyStore',
     items: [
          {

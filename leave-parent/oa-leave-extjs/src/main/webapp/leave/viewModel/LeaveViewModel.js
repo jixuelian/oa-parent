@@ -5,9 +5,9 @@
  * @version 1.0.0
  */
 
-Ext.define('kalix.usecase.lecture.viewModel.LectureViewModel', {
+Ext.define('kalix.app.leave.viewModel.LeaveViewModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.lectureViewModel',
+    alias: 'viewmodel.leaveViewModel',
     data: {
         rec: null,
         validation: {},  //验证错误信息

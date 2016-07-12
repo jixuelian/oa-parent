@@ -3,16 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>oa-parent</artifactId>
-        <groupId>com.kalix.oa</groupId>
+        <artifactId>leave-parent</artifactId>
+        <groupId>com.kalix.oa.leave</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.interview</groupId>
-    <artifactId>interview-parent</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>oa-interview-api</module>
-    </modules>
+    <artifactId>oa-leave-extjs</artifactId>
+    <name>Kalix OA Leave Extjs</name>
+    <packaging>bundle</packaging>
+
+    <properties>
+        <bundle.symbolicName>com.kalix.oa.leave.extjs</bundle.symbolicName>
+    </properties>
+
 </project>

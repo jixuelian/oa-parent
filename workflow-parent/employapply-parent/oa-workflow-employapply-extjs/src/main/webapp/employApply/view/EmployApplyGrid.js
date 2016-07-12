@@ -13,7 +13,6 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
     iconCls: 'iconfont icon-public-employ',
     controller: {
         type: 'employApplyGridController',
-        storeId: 'employApplyStore',
         cfgForm: 'kalix.workflow.employApply.view.TestEmployApplyWindow',
         cfgViewForm: 'kalix.workflow.employApply.view.EmployApplyViewWindow',
         cfgModel: 'kalix.workflow.employApply.model.EmployApplyModel'
@@ -42,7 +41,10 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
             },
             {
                 text: '人员类别',
-                dataIndex: 'personCategory'
+                xtype: 'dictGridColumn',
+                dictType: 'oa_candidate_personCategory',
+                dataIndex: 'personCategory',
+                renderer: null
             },
             {
                 text: '部门',
@@ -54,7 +56,10 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
             },
             {
                 text: '性别',
-                dataIndex: 'sex'
+                xtype: 'dictGridColumn',
+                dictType: 'sex',
+                dataIndex: 'sex',
+                renderer: null
             },
             {
                 text: '经办人',
