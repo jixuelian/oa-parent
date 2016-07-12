@@ -18,7 +18,7 @@ Ext.define('kalix.workflow.recruitApply.controller.RecruitApplyGridController', 
             method: 'GET',
             callback: function (options, success, response) {
                 var resp = Ext.JSON.decode(response.responseText);
-                kalix.core.Notify.success(resp.msg,CONFIG.ALTER_TITLE_INFO);
+                kalix.Notify.success(resp.msg,CONFIG.ALTER_TITLE_INFO);
                 if (resp.success) {
                     var store = grid.getStore();
                     store.reload();
