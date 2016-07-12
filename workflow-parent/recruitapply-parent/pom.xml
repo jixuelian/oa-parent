@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>workflow-parent</artifactId>
+        <groupId>com.kalix.oa.workflow</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kalix.oa.workflow.recruitapply</groupId>
+    <artifactId>recruitapply-parent</artifactId>
+    <name>Kalix OA Workflow Recruit Apply Parent</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>oa-workflow-recruitapply-api</module>
+        <module>oa-workflow-recruitapply-biz</module>
+        <module>oa-workflow-recruitapply-dao</module>
+        <module>oa-workflow-recruitapply-entities</module>
+        <module>oa-workflow-recruitapply-extjs</module>
+        <module>oa-workflow-recruitapply-rest</module>
+        <module>oa-workflow-recruitapply-web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.oa.workflow.recruitapply</groupId>
+                <artifactId>oa-workflow-recruitapply-entities</artifactId>
+                <version>${globle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.oa.workflow.recruitapply</groupId>
+                <artifactId>oa-workflow-recruitapply-api</artifactId>
+                <version>${globle.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
