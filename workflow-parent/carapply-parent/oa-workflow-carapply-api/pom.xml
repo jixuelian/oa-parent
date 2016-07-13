@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.workflow.carapply</groupId>
     <artifactId>oa-workflow-carapply-api</artifactId>
     <name>Kalix OA Workflow Car Apply API</name>
     <packaging>bundle</packaging>

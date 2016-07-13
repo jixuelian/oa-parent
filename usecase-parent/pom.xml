@@ -17,6 +17,7 @@
     <modules>
         <module>interview-parent</module>
         <module>candidate-parent</module>
+        <module>meetingroom-parent</module>
     </modules>
 
 </project>

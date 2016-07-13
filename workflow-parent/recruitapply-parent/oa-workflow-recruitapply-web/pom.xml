@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.workflow.recruitapply</groupId>
     <artifactId>oa-workflow-recruitapply-web</artifactId>
     <name>Kalix OA Workflow Recruit Apply Web</name>
     <packaging>bundle</packaging>

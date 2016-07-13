@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
-    <persistence-unit transaction-type="JTA" name="candidate-unit">
+    <persistence-unit transaction-type="JTA" name="oa-usecase-candidate">
         <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
         <jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/ds)</jta-data-source>
         <class>com.kalix.framework.core.api.persistence.PersistentEntity</class>
-        <class>com.kalix.oa.usecase.candidate.entities.CandidateBean</class>
 
         <properties>
             <property name="openjpa.BrokerImpl" value="non-finalizing"/>

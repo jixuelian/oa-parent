@@ -18,6 +18,7 @@
         <module>carapply-parent</module>
         <module>employapply-parent</module>
         <module>recruitapply-parent</module>
+        <module>meetingapply-parent</module>
     </modules>
 
     <dependencyManagement>

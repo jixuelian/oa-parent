@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.workflow.employapply</groupId>
     <artifactId>oa-workflow-employapply-extjs</artifactId>
     <name>Kalix OA Workflow Employ Apply ExtJS</name>
     <packaging>bundle</packaging>

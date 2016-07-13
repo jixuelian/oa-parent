@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.workflow.recruitapply</groupId>
     <artifactId>oa-workflow-recruitapply-entities</artifactId>
     <name>Kalix OA Workflow Recruit Apply Entities</name>
     <packaging>bundle</packaging>

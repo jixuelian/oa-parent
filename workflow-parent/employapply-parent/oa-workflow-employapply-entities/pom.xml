@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.workflow.employapply</groupId>
     <artifactId>oa-workflow-employapply-entities</artifactId>
     <name>Kalix OA Workflow Employ Apply Entities</name>
     <packaging>bundle</packaging>

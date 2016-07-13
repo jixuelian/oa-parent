@@ -18,7 +18,7 @@ import javax.persistence.PersistenceContext;
  */
 public class CandidateBeanDaoImpl extends GenericDao<CandidateBean, Long> implements ICandidateBeanDao {
     @Override
-    @PersistenceContext(unitName = "candidate-unit")
+    @PersistenceContext(unitName = "oa-usecase-candidate")
     public void setEntityManager(EntityManager em) {
         super.setEntityManager(em);
     }
