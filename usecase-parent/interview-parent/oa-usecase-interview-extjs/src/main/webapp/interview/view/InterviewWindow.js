@@ -7,22 +7,24 @@
 Ext.define('kalix.usecase.interview.view.InterviewWindow', {
         extend: 'kalix.view.components.common.BaseWindow',
         requires: [
-            'kalix.usecase.interview.viewModel.InterviewViewModel',
             'kalix.controller.BaseWindowController',
             'kalix.usecase.candidate.store.CandidateStore'
         ],
         alias: 'widget.interviewWindow',
-        viewModel: 'interviewViewModel',
+        xtype: "interviewWindow",
         controller: {
             type: 'baseWindowController',
             storeId: 'interviewStore'
         },
-        xtype: "interviewWindow",
         whichInterview: 'first',
         width: 400,
         constructor: function () {
             this.callParent(arguments);
-            this.items.items[0].items.items[0].store.proxy.extraParams = {'header.type':this.whichInterview,'jsonStr': '', 'limit': 50};
+            this.items.items[0].items.items[0].store.proxy.extraParams = {
+                'header.type': this.whichInterview,
+                'jsonStr': '',
+                'limit': 50
+            };
             this.items.items[0].items.items[0].store.proxy.url = CONFIG.restRoot + '/camel/rest/candidatescheck/' + this.whichInterview;
         },
         items: [
@@ -48,7 +50,7 @@ Ext.define('kalix.usecase.interview.view.InterviewWindow', {
                             value: '{rec.candidateId}'
                         },
                         listeners: {
-                            select :function( combo, record, eOpts ){
+                            select: function (combo, record, eOpts) {
                                 //Ext.MessageBox.alert(CONFIG.ALTER_TITLE_ERROR, "流程已经启动!");
                             }
                         }

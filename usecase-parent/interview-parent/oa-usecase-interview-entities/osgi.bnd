@@ -4,6 +4,4 @@
 
 Bundle-Activator: ${bundle.namespace}.internal.InitActivator
 Meta-Persistence: META-INF/persistence-jpa.xml
-Import-Package:com.kalix.oa.usecase.interview.entities,*
-JPA-PersistenceUnits:interview-unit
-Bundle-Category: Kalix OA Interview
+Bundle-Category: Kalix OA UseCase Interview

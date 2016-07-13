@@ -8,11 +8,8 @@ Ext.define('kalix.usecase.interview.Main', {
     extend: 'kalix.container.BaseContainer',
     requires: [
         'kalix.usecase.interview.view.InterviewGrid',
-        'kalix.usecase.interview.view.InterviewSearchForm',
-        'kalix.usecase.interview.viewModel.InterviewViewModel'
+        'kalix.usecase.interview.view.InterviewSearchForm'
     ],
-    storeId: 'interviewStore',
-    viewModel: 'interviewViewModel',
     items: [
         {
             title: '面试人员查询',

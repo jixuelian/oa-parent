@@ -18,7 +18,7 @@ import javax.persistence.PersistenceContext;
  */
 public class LectureBeanDaoImpl extends GenericDao<LectureBean, Long> implements ILectureBeanDao {
     @Override
-    @PersistenceContext(unitName = "interview-unit")
+    @PersistenceContext(unitName = "oa-usecase-interview")
     public void setEntityManager(EntityManager em) {
         super.setEntityManager(em);
     }

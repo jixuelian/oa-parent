@@ -13,7 +13,6 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
     xtype: 'interviewGridPanel',
     controller: {
         type: 'interviewGridController',
-        storeId: 'interviewStore',
         cfgForm: 'kalix.usecase.interview.view.InterviewWindow',
         cfgViewForm: 'kalix.usecase.interview.view.InterviewViewWindow',
         cfgModel: 'kalix.usecase.interview.model.InterviewModel'

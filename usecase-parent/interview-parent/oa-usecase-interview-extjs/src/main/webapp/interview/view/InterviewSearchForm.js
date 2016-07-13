@@ -10,7 +10,6 @@ Ext.define('kalix.usecase.interview.view.InterviewSearchForm', {
         'kalix.usecase.candidate.component.CandidateComboBox'
     ],
     xtype: 'interviewSearchForm',
-    storeId: 'interviewStore',
     items: [
         {
             xtype: 'candidateComboBox',

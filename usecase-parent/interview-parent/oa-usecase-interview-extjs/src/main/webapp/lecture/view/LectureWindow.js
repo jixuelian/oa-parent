@@ -19,7 +19,11 @@ Ext.define('kalix.usecase.lecture.view.LectureWindow', {
     width: 400,
     constructor: function () {
         this.callParent(arguments);
-        this.items.items[0].items.items[0].store.proxy.extraParams = {'header.type':this.whichInterview,'jsonStr': '', 'limit': 50};
+        this.items.items[0].items.items[0].store.proxy.extraParams = {
+            'header.type': this.whichInterview,
+            'jsonStr': '',
+            'limit': 50
+        };
         this.items.items[0].items.items[0].store.proxy.url = CONFIG.restRoot + '/camel/rest/candidatescheck/' + this.whichInterview;
     },
     items: [
@@ -45,7 +49,7 @@ Ext.define('kalix.usecase.lecture.view.LectureWindow', {
                         value: '{rec.candidateId}'
                     },
                     listeners: {
-                        select :function( combo, record, eOpts ){
+                        select: function (combo, record, eOpts) {
                             //Ext.MessageBox.alert(CONFIG.ALTER_TITLE_ERROR, "流程已经启动!");
                         }
                     }

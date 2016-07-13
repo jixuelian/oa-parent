@@ -7,11 +7,7 @@
 
 Ext.define('kalix.usecase.interview.view.InterviewViewWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
-    requires: [
-        'kalix.usecase.interview.viewModel.InterviewViewModel'
-    ],
     alias: 'widget.interviewViewWindow',
-    viewModel: 'interviewViewModel',
     xtype: "interviewViewWindow",
     width: 400,
     //todo 在此修改查看字段
