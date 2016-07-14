@@ -8,7 +8,7 @@
     <reference id="identityService" interface="org.activiti.engine.IdentityService"/>
     <reference id="runtimeService" interface="org.activiti.engine.RuntimeService"/>
     <reference id="taskService" interface="org.activiti.engine.TaskService"/>
-    <reference id="meetingroomBeanService" interface="com.kalix.oa.usecase.meetingroom.api.biz.IMeetingroomBeanService"/>
+    <reference id="meetingroomBeanService" interface="com.kalix.oa.system.meetingroom.api.biz.IMeetingroomBeanService"/>
 
     <reference id="meetingApplyBeanDao" interface="com.kalix.oa.workflow.meetingapply.api.dao.IMeetingApplyBeanDao"/>
 

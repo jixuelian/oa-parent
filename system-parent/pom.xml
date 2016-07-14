@@ -9,13 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kalix.oa.usecase</groupId>
-    <artifactId>usecase-parent</artifactId>
-    <name>Kalix OA UseCase Parent</name>
+    <groupId>com.kalix.oa.system</groupId>
+    <artifactId>system-parent</artifactId>
+    <name>Kalix OA System Parent</name>
     <packaging>pom</packaging>
 
     <modules>
-        <module>interview-parent</module>
-        <module>candidate-parent</module>
+        <module>meetingroom-parent</module>
     </modules>
+
 </project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>system-parent</artifactId>
+        <groupId>com.kalix.oa.system</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kalix.oa.system.meetingroom</groupId>
+    <artifactId>meetingroom-parent</artifactId>
+    <name>Kalix OA System Meetingroom Parent</name>
+    <packaging>pom</packaging>
+    <modules>
+        <module>oa-system-meetingroom-api</module>
+        <module>oa-system-meetingroom-biz</module>
+        <module>oa-system-meetingroom-dao</module>
+        <module>oa-system-meetingroom-entities</module>
+        <module>oa-system-meetingroom-extjs</module>
+        <module>oa-system-meetingroom-rest</module>
+        <module>oa-system-meetingroom-web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.admin.core</groupId>
+                <artifactId>admin-core-entities</artifactId>
+                <version>${globle.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kalix.oa.system.meetingroom</groupId>
+                <artifactId>oa-system-meetingroom-api</artifactId>
+                <version>${globle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.oa.system.meetingroom</groupId>
+                <artifactId>oa-system-meetingroom-entities</artifactId>
+                <version>${globle.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

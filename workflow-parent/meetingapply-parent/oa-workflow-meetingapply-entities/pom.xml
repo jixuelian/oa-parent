@@ -24,9 +24,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.kalix.oa.usecase.meetingroom</groupId>
-            <artifactId>oa-usecase-meetingroom-entities</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.kalix.oa.system.meetingroom</groupId>
+            <artifactId>oa-system-meetingroom-entities</artifactId>
+            <version>${globle.version}</version>
         </dependency>
     </dependencies>
 

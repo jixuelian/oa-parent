@@ -12,7 +12,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyWindow', {
         'kalix.view.components.common.TableFormRadioGroup',
         'kalix.controller.BaseWindowController',
         'kalix.view.components.common.TableFormDateTimeField',
-        'kalix.usecase.meetingroom.component.MeetingroomComboBox'
+        'kalix.system.meetingroom.component.MeetingroomComboBox'
     ],
     alias: 'widget.meetingApplyWindow',
     xtype: "meetingApplyWindow",

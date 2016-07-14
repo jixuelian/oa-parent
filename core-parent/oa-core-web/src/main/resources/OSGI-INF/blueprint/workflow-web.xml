@@ -26,6 +26,11 @@
         <bean class="com.kalix.oa.core.web.impl.module.MyWorkingModuleImpl"/>
     </service>
 
+    <!--系统管理模块-->
+    <service interface="com.kalix.framework.core.api.web.IModule">
+        <bean class="com.kalix.oa.core.web.impl.module.OaSystemModuleImpl"/>
+    </service>
+
 
     <!--流程定义管理-->
     <service interface="com.kalix.framework.core.api.web.IMenu">

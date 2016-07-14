@@ -12,7 +12,7 @@ import com.kalix.framework.core.api.persistence.PersistentEntity;
 import com.kalix.framework.core.util.BeanUtil;
 import com.kalix.framework.core.util.SerializeUtil;
 import com.kalix.middleware.workflow.biz.WorkflowGenericBizServiceImpl;
-import com.kalix.oa.usecase.meetingroom.api.biz.IMeetingroomBeanService;
+import com.kalix.oa.system.meetingroom.api.biz.IMeetingroomBeanService;
 import com.kalix.oa.workflow.meetingapply.api.biz.IMeetingApplyBeanService;
 import com.kalix.oa.workflow.meetingapply.api.dao.IMeetingApplyBeanDao;
 import com.kalix.oa.workflow.meetingapply.entities.MeetingApplyBean;
