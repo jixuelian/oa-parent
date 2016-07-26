@@ -10,5 +10,5 @@ import com.kalix.oa.workflow.employapply.entities.EmployApplyBean;
  */
 public interface IEmployApplyBeanService extends IWorkflowBizService<EmployApplyBean> {
       final String PROCESS_KEY_NAME="employapply";
-      JsonData getAllEntityByQuery(int page, int limit, String jsonStr);
+      JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr);
 }

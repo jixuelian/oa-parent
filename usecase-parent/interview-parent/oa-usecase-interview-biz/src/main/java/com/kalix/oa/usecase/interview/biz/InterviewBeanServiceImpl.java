@@ -30,7 +30,7 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
     }
 
     @Override
-    public JsonData getAllEntityByQuery(int page, int limit, String jsonStr) {
+    public JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr) {
         Map<String, String> jsonMap = SerializeUtil.json2Map(jsonStr);
         //获得查询的sql语句
         String sql = getNativeQueryStr();

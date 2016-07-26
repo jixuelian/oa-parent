@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
 
-Ext.define('kalix.app.meetingroom.view.MeetingroomViewWindow', {
+Ext.define('kalix.system.meetingroom.view.MeetingroomViewWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     alias: 'widget.meetingroomViewWindow',
     xtype: "meetingroomViewWindow",
