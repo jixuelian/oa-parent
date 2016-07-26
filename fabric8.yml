@@ -1,5 +1,4 @@
 ---
-pipeline: "workflows/maven/Deploy/Jenkinsfile"
 buildName: "oa-parent"
 codeReview: false
 links:
