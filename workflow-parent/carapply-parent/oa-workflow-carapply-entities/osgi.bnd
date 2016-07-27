@@ -5,3 +5,4 @@
 Bundle-Activator: ${bundle.namespace}.internal.InitActivator
 Meta-Persistence: META-INF/persistence-jpa.xml
 Bundle-Category: Kalix OA Workflow Car Apply
+Import-Package:com.kalix.framework.core.api.persistence,*

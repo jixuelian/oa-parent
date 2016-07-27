@@ -44,5 +44,17 @@
                 <to uri="bean:oADictBeanService?method=deleteEntity(${header.id})"/>
             </delete>
         </rest>
+        <rest path="/oa/dicts/cache/list" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <get id="route-getAllOADictInCache">
+                <description>Find all dicts</description>
+                <to uri="bean:oADictBeanService?method=getAllEntity()"/>
+            </get>
+        </rest>
+        <rest path="/oa/dicts/types/list" consumes="application/json;charset=utf-8" produces="application/json;charset=utf-8">
+            <get id="route-getAllOADictTypes">
+                <description>Find all dicts</description>
+                <to uri="bean:oADictBeanService?method=getDictTypes(${header.query})"/>
+            </get>
+        </rest>
     </camelContext>
 </blueprint>
