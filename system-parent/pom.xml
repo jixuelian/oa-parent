@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--<module>meetingroom-parent</module>-->
+        <module>meetingroom-parent</module>
         <module>dict-parent</module>
     </modules>
 
