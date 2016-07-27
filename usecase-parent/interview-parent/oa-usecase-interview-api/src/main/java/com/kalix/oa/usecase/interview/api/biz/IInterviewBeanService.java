@@ -16,7 +16,7 @@ import com.kalix.oa.usecase.interview.entities.InterviewBean;
  */
 public interface IInterviewBeanService extends IBizService<InterviewBean> {
     //在此添加新的业务方法
-    JsonData getAllEntityByQuery(int page, int limit, String jsonStr);
+    JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr);
     JsonStatus updateEntity(InterviewBean entity);
 
 }

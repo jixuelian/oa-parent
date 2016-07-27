@@ -44,7 +44,7 @@ public class MeetingApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<I
     }
 
     @Override
-    public JsonData getAllEntityByQuery(int page, int limit, String jsonStr) {
+    public JsonData getAllEntityByQuery(Integer page, Integer limit, String jsonStr) {
         JsonData jsonData = new JsonData();
         jsonData = super.getAllEntityByQuery(page, limit, jsonStr);
 
