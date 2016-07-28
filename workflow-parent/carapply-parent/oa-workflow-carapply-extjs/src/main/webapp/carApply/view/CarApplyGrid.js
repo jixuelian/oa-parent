@@ -11,7 +11,6 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
     alias: 'widget.carApplyGrid',
     xtype: 'carApplyGrid',
     iconCls: 'iconfont icon-public-car',
-    autoLoad:false,
     controller: {
         type: 'carApplyGridController',
         cfgForm: 'kalix.workflow.carApply.view.CarApplyWindow',
@@ -87,7 +86,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
             {
                 text: '工作流状态',
                 xtype: 'oADictGridColumn',
-                dictType: '测试类型11',
+                dictType: '工作流状态',
                 dataIndex: 'status',
                 colorConfig: {
                     '结束': 'red',

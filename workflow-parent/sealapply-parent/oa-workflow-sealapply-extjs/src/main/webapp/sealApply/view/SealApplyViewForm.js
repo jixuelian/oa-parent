@@ -7,7 +7,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyViewForm', {
     requires: [
         'kalix.view.components.common.TableFormField',
         'Ext.ux.DateTimeField',
-        'kalix.sys.dict.component.DictCombobox'
+        'kalix.oa.oADict.component.OADictCombobox'
     ],
     alias: 'widget.sealApplyViewForm',
     xtype: "sealApplyViewForm",
@@ -70,9 +70,9 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyViewForm', {
             items: [
                 {
 
-                    xtype: 'dictCombobox',
+                    xtype: 'oADictCombobox',
                     readOnly: true,
-                    dictType: 'sealType',
+                    dictType: '印章类型',
                     name: 'sealType',
                     fieldStyle: 'font-size:15px;background:transparent;',
                     bind: {

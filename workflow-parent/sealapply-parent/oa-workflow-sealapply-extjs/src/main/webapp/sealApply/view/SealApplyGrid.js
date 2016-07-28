@@ -6,7 +6,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
     requires: [
         'kalix.workflow.sealApply.controller.SealApplyGridController',
         'kalix.workflow.sealApply.store.SealApplyStore',
-        'kalix.sys.dict.component.DictGridColumn'
+        'kalix.oa.oADict.component.OADictGridColumn'
     ],
     alias: 'widget.sealApplyGrid',
     xtype: 'sealApplyGrid',
@@ -52,8 +52,8 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
             },
             {
                 text: '印章类别',
-                xtype: 'dictGridColumn',
-                dictType: 'sealType',
+                xtype: 'oADictGridColumn',
+                dictType: '印章类型',
                 dataIndex: 'sealType',
                 renderer: null
             },
@@ -67,8 +67,8 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
             },
             {
                 text: '工作流状态',
-                xtype: 'dictGridColumn',
-                dictType: 'workflowStatus',
+                xtype: 'oADictGridColumn',
+                dictType: '工作流状态',
                 dataIndex: 'status',
                 colorConfig: {
                     '结束': 'red',
