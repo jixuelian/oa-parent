@@ -34,6 +34,12 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
         return PROCESS_KEY_NAME;
     }
 
+    /**
+     * 通过招聘人员表与入职审批工作流表的关联，查询出招聘人员的人员类别，传递给工作流
+     * @param map
+     * @param bean
+     * @return
+     */
     @Override
     public Map getVariantMap(Map map, EmployApplyBean bean) {
         List<CandidateBean> candidateBeanList = candidateBeanService.getAllEntity();
@@ -45,8 +51,7 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
                 }
             }
         }
-        //List<CandidateBean> candidateBeanList = dao.findByNativeSql("select personCategory from oa_candidate where employApplyWorkflowId=?1",CandidateBean.class,bean.getId());
-        //map.put("personCategory", candidateBeanList.get(0).getPersonCategory());
+
         return map;
     }
 
@@ -55,7 +60,6 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
         Map<String, String> jsonMap = SerializeUtil.json2Map(jsonStr);
         //获得查询的sql语句
         String sql = getNativeQueryStr();
-        Assert.notNull(sql, "查询条件不能为空.");
         //获得返回的结果类
         Class<? extends BaseDTO> cls = getResultClass();
         Assert.notNull(cls, "返回查询结果类不能为空.");
@@ -68,6 +72,14 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
         return dao.findByNativeSql(sql + posSql, page, limit, cls, null);
     }
 
+    /**
+     * 查询可以入职人员
+     * 招聘人员表oa_candidate与入职工作流表employApplyWorkflowId关联查询
+     * 当人员类别为1(行政和科研人员)时，那么需要初试面试和复试面试都通过
+     * 当人员类别为2(专职教师)时，那么需要进行一次面试通过和试讲通过
+     * 当人员类别为3(兼职教师)时，那么需要试讲通过
+     * @return
+     */
     @Override
     protected String getNativeQueryStr() {
         return "select a.id,a.personCategory,a.department,a.xm,a.sex,a.age,a.tel,a.position," +
@@ -121,9 +133,7 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
             Map varMap = new HashMap<>();
             getVariantMap(varMap,bean);
 
-            //varMap.put(getProcessKeyName(), bizKey);
-            //runtimeService.setVariables(getProcessKeyName(),varMap);
-            //ProcessInstance instance = runtimeService.startProcessInstanceByKey(getProcessKeyName(), bizKey);
+            // 将人员类别varMap传递到工作流中去，用于控制流程的分支
             ProcessInstance instance = runtimeService.startProcessInstanceByKey(getProcessKeyName(),bizKey, varMap);
 
             Task task = taskService.createTaskQuery().processInstanceId(instance.getProcessInstanceId()).singleResult();
