@@ -34,7 +34,6 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
         Map<String, String> jsonMap = SerializeUtil.json2Map(jsonStr);
         //获得查询的sql语句
         String sql = getNativeQueryStr();
-        Assert.notNull(sql, "查询条件不能为空.");
         //获得返回的结果类
         Class<? extends BaseDTO> cls = getResultClass();
         Assert.notNull(cls, "返回查询结果类不能为空.");
@@ -49,6 +48,11 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
         return dao.findByNativeSql(sql + posSql, page, limit, cls, null);
     }
 
+    /**
+     * 从应聘人员表oa_candidate和面试表oa_interview中关联查出人员类别为1(行政和科研人员)和2(专职教师)的2类人员
+     * 也就是说行政和科研人员、专职教师需要进行面试，其中行政和科研人员需要进行初始和复试，而专职教师只需要一次面试，兼职教师不需要进行面试
+     * @return
+     */
     @Override
     protected String getNativeQueryStr() {
         return "select b.id," +
