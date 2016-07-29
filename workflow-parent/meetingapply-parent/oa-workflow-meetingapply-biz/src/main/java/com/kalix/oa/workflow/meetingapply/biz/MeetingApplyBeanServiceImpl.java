@@ -48,6 +48,9 @@ public class MeetingApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<I
         JsonData jsonData = new JsonData();
         jsonData = super.getAllEntityByQuery(page, limit, jsonStr);
 
+        /**
+         * 以下代码，是为了前台显示用的，将会议室id翻译为会议室名称
+         */
         List beans = jsonData.getData();
         List ids = BeanUtil.getBeanFieldValueList(beans, "meetingroomId");
         List values = this.meetingroomBeanService.getFieldValuesByIds(ids.toArray(), "name");
@@ -59,6 +62,11 @@ public class MeetingApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<I
         return jsonData;
     }
 
+    /**
+     * 用于检测在会议室申请的时间范围内，是否该与该会议室已经申请的会议试讲有冲突
+     * @param jsonStr
+     * @return
+     */
     @Override
     public JsonStatus checkDateTime(String jsonStr) {
         MeetingApplyBean entity = SerializeUtil.unserializeJson(jsonStr, MeetingApplyBean.class);
@@ -137,6 +145,11 @@ public class MeetingApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<I
         return jsonStatus;
     }
 
+    /**
+     * 查询给定日期当天会议室的使用情况
+     * @param date
+     * @return
+     */
     @Override
     public JsonData reservation(Date date) {
         if (date == null) return null;
@@ -150,6 +163,12 @@ public class MeetingApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<I
         return jsonData;
     }
 
+    /**
+     * 查询特定会议室在给定日期当天会议室的使用情况
+     * @param roomId
+     * @param date
+     * @return
+     */
     @Override
     public JsonData reservation(long roomId, Date date) {
         if (date == null) return null;
