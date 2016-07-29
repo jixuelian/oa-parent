@@ -6,7 +6,6 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
         'kalix.controller.BaseWindowController',
-        'kalix.sys.dict.component.DictCombobox',
         'Ext.ux.DateTimeField'
     ],
     alias: 'widget.employApplyWindow',

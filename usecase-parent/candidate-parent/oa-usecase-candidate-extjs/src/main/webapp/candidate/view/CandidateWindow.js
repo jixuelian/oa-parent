@@ -8,7 +8,7 @@ Ext.define('kalix.usecase.candidate.view.CandidateWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
         'kalix.controller.BaseWindowController',
-        'kalix.sys.dict.component.DictCombobox'
+        'kalix.oa.oADict.component.OADictCombobox'
     ],
     alias: 'widget.candidateWindow',
     controller: {
@@ -24,8 +24,8 @@ Ext.define('kalix.usecase.candidate.view.CandidateWindow', {
                 {
                     fieldLabel: '人员类别',
                     allowBlank: false,
-                    xtype: 'dictCombobox',
-                    dictType: 'oa_candidate_personCategory',
+                    xtype: 'oADictCombobox',
+                    dictType: '招聘人员类别',
                     bind: {
                         value: '{rec.personCategory}'
                     }
@@ -47,8 +47,8 @@ Ext.define('kalix.usecase.candidate.view.CandidateWindow', {
                 {
                     fieldLabel: '性别',
                     allowBlank: false,
-                    xtype: 'dictCombobox',
-                    dictType: 'sex',
+                    xtype: 'oADictCombobox',
+                    dictType: '性别',
                     bind: {
                         value: '{rec.sex}'
                     }

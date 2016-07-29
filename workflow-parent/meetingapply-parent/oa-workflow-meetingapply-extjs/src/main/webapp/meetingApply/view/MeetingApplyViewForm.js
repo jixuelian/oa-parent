@@ -8,7 +8,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyViewForm', {
         'kalix.view.components.common.TableFormField',
         'kalix.view.components.common.TableFormRadioGroup',
         'kalix.view.components.common.TableFormDateTimeField',
-        'kalix.sys.dict.component.DictCombobox',
+        'kalix.oa.oADict.component.OADictCombobox',
         'kalix.system.meetingroom.component.MeetingroomComboBox'
     ],
     alias: 'widget.meetingApplyViewForm',
@@ -80,9 +80,9 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyViewForm', {
                     bodyStyle: 'padding:10px 0px 0px 20px;font-size:15px;',
                     items: [
                         {
-                            xtype: 'dictCombobox',
+                            xtype: 'oADictCombobox',
                             readOnly: true,
-                            dictType: 'requireType',
+                            dictType: '会议需求类型',
                             name: 'requireType',
                             fieldStyle: 'font-size:15px;background:transparent;',
                             bind: {

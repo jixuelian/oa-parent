@@ -8,7 +8,7 @@ Ext.define('kalix.usecase.candidate.view.CandidateGrid', {
     requires: [
         'kalix.usecase.candidate.controller.CandidateGridController',
         'kalix.usecase.candidate.store.CandidateStore',
-        'kalix.sys.dict.component.DictGridColumn'
+        'kalix.oa.oADict.component.OADictGridColumn'
     ],
     alias: 'widget.candidateGrid',
     xtype: 'candidateGridPanel',
@@ -41,8 +41,8 @@ Ext.define('kalix.usecase.candidate.view.CandidateGrid', {
             },
             {
                 text: '人员类别',
-                xtype: 'dictGridColumn',
-                dictType: 'oa_candidate_personCategory',
+                xtype: 'oADictGridColumn',
+                dictType: '招聘人员类别',
                 dataIndex: 'personCategory',
                 renderer: null
             },
@@ -60,8 +60,8 @@ Ext.define('kalix.usecase.candidate.view.CandidateGrid', {
             },
             {
                 text: '性别',
-                xtype: 'dictGridColumn',
-                dictType: 'sex',
+                xtype: 'oADictGridColumn',
+                dictType: '性别',
                 dataIndex: 'sex',
                 renderer: null
             },

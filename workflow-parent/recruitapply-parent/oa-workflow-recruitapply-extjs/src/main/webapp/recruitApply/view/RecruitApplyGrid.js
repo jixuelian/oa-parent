@@ -6,7 +6,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyGrid', {
     requires: [
         'kalix.workflow.recruitApply.controller.RecruitApplyGridController',
         'kalix.workflow.recruitApply.store.RecruitApplyStore',
-        'kalix.sys.dict.component.DictGridColumn'
+        'kalix.oa.oADict.component.OADictGridColumn'
     ],
     alias: 'widget.recruitApplyGrid',
     xtype: 'recruitApplyGrid',
@@ -81,8 +81,8 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyGrid', {
             },
             {
                 text: '工作流状态',
-                xtype: 'dictGridColumn',
-                dictType: 'workflowStatus',
+                xtype: 'oADictGridColumn',
+                dictType: '工作流状态',
                 dataIndex: 'status',
                 colorConfig: {
                     '结束': 'red',

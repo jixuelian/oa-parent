@@ -6,7 +6,7 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
     requires: [
         'kalix.workflow.employApply.controller.EmployApplyGridController',
         'kalix.workflow.employApply.store.EmployApplyStore',
-        'kalix.sys.dict.component.DictGridColumn'
+        'kalix.oa.oADict.component.OADictGridColumn'
     ],
     alias: 'widget.employApplyGrid',
     xtype: 'employApplyGrid',
@@ -41,8 +41,8 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
             },
             {
                 text: '人员类别',
-                xtype: 'dictGridColumn',
-                dictType: 'oa_candidate_personCategory',
+                xtype: 'oADictGridColumn',
+                dictType: '招聘人员类别',
                 dataIndex: 'personCategory',
                 renderer: null
             },
@@ -56,8 +56,8 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
             },
             {
                 text: '性别',
-                xtype: 'dictGridColumn',
-                dictType: 'sex',
+                xtype: 'oADictGridColumn',
+                dictType: '性别',
                 dataIndex: 'sex',
                 renderer: null
             },
@@ -75,8 +75,8 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
             },
             {
                 text: '工作流状态',
-                xtype: 'dictGridColumn',
-                dictType: 'workflowStatus',
+                xtype: 'oADictGridColumn',
+                dictType: '工作流状态',
                 dataIndex: 'status',
                 colorConfig: {
                     '结束': 'red',

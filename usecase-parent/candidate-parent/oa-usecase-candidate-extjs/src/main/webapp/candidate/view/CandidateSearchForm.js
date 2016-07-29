@@ -6,12 +6,16 @@
 Ext.define('kalix.usecase.candidate.view.CandidateSearchForm', {
     extend: 'kalix.view.components.common.BaseSearchForm',
     alias: 'widget.candidateSearchForm',
+    requires: [
+        'kalix.oa.oADict.component.OADictCombobox'
+    ],
     xtype: 'candidateSearchForm',
     storeId: 'candidateStore',
     items: [
         {
-            xtype: 'textfield',
             fieldLabel: '人员类别',
+            xtype: 'oADictCombobox',
+            dictType: '招聘人员类别',
             labelAlign: 'right',
             labelWidth: 60,
             width: 200,

@@ -6,7 +6,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
     requires: [
         'kalix.workflow.meetingApply.controller.MeetingApplyGridController',
         'kalix.workflow.meetingApply.store.MeetingApplyStore',
-        'kalix.sys.dict.component.DictGridColumn'
+        'kalix.oa.oADict.component.OADictGridColumn'
     ],
     alias: 'widget.meetingApplyGrid',
     xtype: 'meetingApplyGrid',
@@ -98,8 +98,8 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
             },
             {
                 text: '工作流状态',
-                xtype: 'dictGridColumn',
-                dictType: 'workflowStatus',
+                xtype: 'oADictGridColumn',
+                dictType: '工作流状态',
                 dataIndex: 'status',
                 colorConfig: {
                     '结束': 'red',
@@ -156,7 +156,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
                             if (record.data.status) {
                                 return "kalix_hidden";
                             }
-                            return "icon-start";
+                            return "iconfont icon-start";
                         },
                         getTip: function (value, metadata, record, row, col, store) {
                             if (record.data.status) {
