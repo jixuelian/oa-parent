@@ -38,6 +38,8 @@ Ext.define('kalix.workflow.meetingApply.controller.MeetingApplyGridController', 
         win.show();
     },
     onReservation: function(){
+        alert('暂未实现');
+        return;
         var win = Ext.create('', {
 
         });
