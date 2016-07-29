@@ -28,11 +28,11 @@ public class CandidateBeanServiceImpl extends ShiroGenericBizServiceImpl<ICandid
     public JsonData getAllEntityByCheck(String type){
         JsonData jsonData = new JsonData();
         List<PersistentEntity> checkList;
-        if(type.equals("first")) {
+        if(type.equals("first")) {// first 获取初试人员
             checkList = dao.findByNativeSql("select b.id,a.id as candidateId,a.xm from oa_candidate a LEFT JOIN oa_interview b on a.id = b.candidateid where (b.passfirst = false or b.passfirst is null) and (a.personcategory='1' or a.personcategory='2')", CandidateDTO.class, "");
-        }else if(type.equals("second")){
+        }else if(type.equals("second")){// second 获取复试人员
             checkList = dao.findByNativeSql("select b.id,a.id as candidateId,a.xm from oa_candidate a LEFT JOIN oa_interview b on a.id = b.candidateid where b.passfirst = true and (b.passSecond = false or b.passSecond is null) and a.personcategory='1'", CandidateDTO.class, "");
-        }else{
+        }else{// lecture 获取试讲人员
             checkList = dao.findByNativeSql("select b.id,a.id as candidateId,a.xm from oa_candidate a LEFT JOIN oa_lecture b on a.id = b.candidateid where (case a.personcategory when '2' then a.id in (select candidateid from oa_interview c where c.passfirst=true) " +
                     " when '3' then a.id in (select candidateid from oa_lecture d where d.pass=false or d.pass is null)" +
                     " end)", CandidateDTO.class, "");
