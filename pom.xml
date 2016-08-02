@@ -18,6 +18,7 @@
         <!--<module>candidate-parent</module>-->
         <module>usecase-parent</module>
         <module>system-parent</module>
+        <module>karaf-features</module>
     </modules>
     <build>
         <plugins>
