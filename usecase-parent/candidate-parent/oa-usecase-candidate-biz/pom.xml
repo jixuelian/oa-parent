@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oa-usease-candidate-biz</artifactId>
+    <artifactId>oa-usecase-candidate-biz</artifactId>
     <name>Kalix OA UseCase Candidate Biz</name>
     <packaging>bundle</packaging>
 
