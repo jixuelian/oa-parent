@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 //todo 修改模型定义
 @Entity
-@Table(name = "sys_meetingroom")
+@Table(name = "oa_meetingroom")
 public class MeetingroomBean extends PersistentEntity {
     /**
      * @describe 会议室名称
