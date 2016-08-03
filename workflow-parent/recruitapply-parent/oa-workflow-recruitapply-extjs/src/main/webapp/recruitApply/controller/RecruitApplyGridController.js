@@ -5,6 +5,9 @@ Ext.define('kalix.workflow.recruitApply.controller.RecruitApplyGridController', 
     extend: 'kalix.controller.BaseGridController',
     requires: ['kalix.workflow.components.ActivitiProcessImageWindow'],
     alias: 'controller.recruitApplyGridController',
+    mixins: {
+        attachment: 'kalix.attachment.common.mixins.Attachment'
+    },
     onWorkFlowStart: function (grid, rowIndex, colIndex) {
         var rec = grid.getStore().getAt(rowIndex);
         var postUrl;
