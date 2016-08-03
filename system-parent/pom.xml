@@ -17,6 +17,5 @@
     <modules>
         <module>meetingroom-parent</module>
         <module>dict-parent</module>
-        <module>oa-system-database-init</module>
     </modules>
 </project>
