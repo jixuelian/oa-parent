@@ -62,6 +62,10 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                 dataIndex: 'createBy'
             },
             {
+                text: '审批结果',
+                dataIndex: 'auditResult'
+            },
+            {
                 text: '当前环节',
                 dataIndex: 'currentNode'
             },
@@ -87,6 +91,17 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                         permission: '',
                         tooltip: '查看',
                         handler: 'onView'
+                    },
+                    {
+                        permission: '',
+                        tooltip: '编辑',
+                        handler: 'onEdit',
+                        getClass: function (v, meta, record) {
+                            if (0 != record.data.status) {
+                                return "kalix_hidden";
+                            }
+                            return "iconfont icon-edit-column";
+                        }
                     },
                     {
                         //icon: "resources/images/workflow.png",

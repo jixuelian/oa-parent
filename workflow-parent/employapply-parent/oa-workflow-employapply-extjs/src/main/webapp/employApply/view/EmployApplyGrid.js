@@ -90,7 +90,7 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                 xtype: 'securityGridColumnCommon',
                 items: [
                     {
-                        iconCls: 'iconfont icon-vie-column',
+                        iconCls: 'iconfont icon-view-column',
                         permission: '',
                         tooltip: '查看',
                         handler: 'onView'

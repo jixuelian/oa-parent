@@ -96,7 +96,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyGrid', {
                 xtype: 'securityGridColumnCommon',
                 items: [
                     {
-                        iconCls: 'iconfont icon-vie-column',
+                        iconCls: 'iconfont icon-view-column',
                         permission: '',
                         tooltip: '查看',
                         handler: 'onView'
