@@ -32,9 +32,7 @@ public class InitActivator extends KalixBundleActivator {
         if (reference != null)
             bundleContext.ungetService(reference);
         if (httpService != null) {
-            httpService.unregister(contextPath + "/app/admin");
-            httpService.unregister(contextPath + "/app/admin/application");
-            httpService.unregister(contextPath + "/app/admin/function");
+            httpService.unregister(contextPath + "/app/oa");
         }
     }
 }

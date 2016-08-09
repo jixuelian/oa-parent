@@ -116,7 +116,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
                             return "iconfont icon-edit-column";
                         }
                     },
-                    /*{
+                    {
                         permission: 'oa:workFlowBizModule:carApplyMenu:progress',
                         tooltip: '查看进度',
                         handler: 'onViewCurrentProcess',
@@ -126,7 +126,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
                             }
                             return "iconfont icon-current-process";
                         }
-                    },*/
+                    },
                     {
                         permission: 'oa:workFlowBizModule:carApplyMenu:delete',
                         tooltip: '删除',
@@ -137,7 +137,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
                             }
                             return "iconfont icon-delete";
                         }
-                    }/*,
+                    },
                     {
                         getClass: function (v, meta, record) {
                             if (record.data.status) {
@@ -153,7 +153,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyGrid', {
                         },
                         permission: 'oa:workFlowBizModule:carApplyMenu:control',
                         handler: 'onWorkFlowStart'
-                    }*/,
+                    },
                     {
                         iconCls: 'iconfont icon-attachment-column',
                         permission: 'oa:workFlowBizModule:carApplyMenu:attachment',

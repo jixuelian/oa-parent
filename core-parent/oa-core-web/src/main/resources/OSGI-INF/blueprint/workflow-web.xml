@@ -12,9 +12,9 @@
         <bean class="com.kalix.oa.core.web.impl.module.WorkFlowModuleImpl"/>
     </service>
     <!--流程消息模块-->
-    <service interface="com.kalix.framework.core.api.web.IModule">
+    <!--<service interface="com.kalix.framework.core.api.web.IModule">
         <bean class="com.kalix.oa.core.web.impl.module.MyMessageModuleImpl"/>
-    </service>
+    </service>-->
 
     <!--业务流程模块-->
     <service interface="com.kalix.framework.core.api.web.IModule">
