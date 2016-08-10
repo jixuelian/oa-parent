@@ -91,12 +91,12 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                 items: [
                     {
                         iconCls: 'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:edit',
                         tooltip: '编辑',
                         handler: 'onEdit',
                         getClass: function (v, meta, record) {
@@ -107,7 +107,7 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                         }
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:progress',
                         tooltip: '查看进度',
                         handler: 'onViewCurrentProcess',
                         getClass: function (v, meta, record) {
@@ -118,7 +118,7 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                         }
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:delete',
                         tooltip: '删除',
                         handler: 'onDelete',
                         getClass: function (v, meta, record) {
@@ -141,12 +141,12 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                             }
                             return '启动';
                         },
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:control',
                         handler: 'onWorkFlowStart'
                     },
                     {
                         iconCls: 'iconfont icon-attachment-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:employApplyMenu:attachment',
                         tooltip: '附件管理',
                         handler: 'onAttachmentManage'
                     }

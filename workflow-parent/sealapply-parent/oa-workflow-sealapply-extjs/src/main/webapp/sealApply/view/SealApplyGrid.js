@@ -88,12 +88,12 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                 items: [
                     {
                         iconCls: 'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:edit',
                         tooltip: '编辑',
                         handler: 'onEdit',
                         getClass: function (v, meta, record) {
@@ -105,7 +105,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                     },
                     {
                         //icon: "resources/images/workflow.png",
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:progress',
                         tooltip: '查看当前流程',
                         handler: 'onViewCurrentProcess',
                         getClass: function (v, meta, record) {
@@ -116,7 +116,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                         }
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:delete',
                         tooltip: '删除',
                         handler: 'onDelete',
                         getClass: function (v, meta, record) {
@@ -140,12 +140,12 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                             }
                             return '启动';
                         },
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:control',
                         handler: 'onWorkFlowStart'
                     },
                     {
                         iconCls: 'iconfont icon-attachment-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:sealApplyMenu:attachment',
                         tooltip: '附件管理',
                         handler: 'onAttachmentManage'
                     }
@@ -159,7 +159,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
             {
                 text: '添加',
                 xtype: 'button',
-                permission: '',
+                permission: 'oa:workFlowBizModule:sealApplyMenu:add',
                 iconCls: 'iconfont icon-add',
                 handler: 'onAdd'
             }

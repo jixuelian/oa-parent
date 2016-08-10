@@ -114,12 +114,12 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
                 items: [
                     {
                         iconCls: 'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:edit',
                         tooltip: '编辑',
                         handler: 'onEdit',
                         getClass: function (v, meta, record) {
@@ -130,7 +130,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
                         }
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:progress',
                         tooltip: '查看进度',
                         handler: 'onViewCurrentProcess',
                         getClass: function (v, meta, record) {
@@ -141,7 +141,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
                         }
                     },
                     {
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:delete',
                         tooltip: '删除',
                         handler: 'onDelete',
                         getClass: function (v, meta, record) {
@@ -164,12 +164,12 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
                             }
                             return '启动';
                         },
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:control',
                         handler: 'onWorkFlowStart'
                     },
                     {
                         iconCls: 'iconfont icon-attachment-column',
-                        permission: '',
+                        permission: 'oa:workFlowBizModule:meetingApplyMenu:attachment',
                         tooltip: '附件管理',
                         handler: 'onAttachmentManage'
                     }
@@ -183,7 +183,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
             {
                 text: '添加',
                 xtype: 'button',
-                permission: '',
+                permission: 'oa:workFlowBizModule:meetingApplyMenu:add',
                 iconCls: 'iconfont icon-add',
                 handler: 'onAdd'
             },
