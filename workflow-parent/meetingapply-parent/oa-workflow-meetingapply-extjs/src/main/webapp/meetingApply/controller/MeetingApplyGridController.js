@@ -33,7 +33,7 @@ Ext.define('kalix.workflow.meetingApply.controller.MeetingApplyGridController', 
     },
     onViewCurrentProcess: function (grid, rowIndex, colIndex) {
         var rec = grid.getStore().getAt(rowIndex);
-        var imgUrl = '/image' + "?processInstanceId=" + rec.data.processInstanceId;
+        var imgUrl = "processInstanceId=" + rec.data.processInstanceId;
         var win = Ext.create('kalix.workflow.components.ActivitiProcessImageWindow', {
             title: '当前流程 - 编号[' + rec.data.id+']',
             imgUrl: imgUrl
