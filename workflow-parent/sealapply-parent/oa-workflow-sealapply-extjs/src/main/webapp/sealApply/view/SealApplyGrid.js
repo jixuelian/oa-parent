@@ -19,19 +19,19 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
     store: {
         type: 'sealApplyStore'
     },
-    columns: {
-        defaults: {
-            flex: 1,
-            renderer: 'addTooltip'
-        },
-        items: [
+    // columns: {
+    //     defaults: {
+    //         flex: 1,
+    //         renderer: 'addTooltip'
+    //     },
+      columns: [
             {
                 xtype: "rownumberer",
-                text: "行号",
-                width: 50,
-                flex: 0,
-                align: 'center',
-                renderer: null
+                // text: "行号",
+                // width: 50,
+                // flex: 0,
+                // align: 'center',
+                // renderer: null
             },
             {
                 text: '编号',
@@ -55,7 +55,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                 xtype: 'oADictGridColumn',
                 dictType: '印章类型',
                 dataIndex: 'sealType',
-                renderer: null
+                //renderer: null
             },
             {
                 text: '经办人',
@@ -77,10 +77,10 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                 colorConfig: {
                     '结束': 'red',
                     'default': 'blue'
-                },
-                renderer: null
+                }
+                //,
+                //renderer: null
             }
-
             ,
             {
                 flex: 1.5,
@@ -151,15 +151,15 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                     }
                 ]
             }
-        ]
-    },
+        ],
+    //},
     tbar: {
         xtype: 'securityToolbar',
         verifyItems: [
             {
                 text: '添加',
                 xtype: 'button',
-                permission: 'oa:workFlowBizModule:sealApplyMenu:add',
+                permission: 'add',
                 iconCls: 'iconfont icon-add',
                 handler: 'onAdd'
             }
