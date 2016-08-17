@@ -88,12 +88,12 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                 items: [
                     {
                         iconCls: 'iconfont icon-view-column',
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:view',
+                        permission: 'view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:edit',
+                        permission: 'edit',
                         tooltip: '编辑',
                         handler: 'onEdit',
                         getClass: function (v, meta, record) {
@@ -105,7 +105,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                     },
                     {
                         //icon: "resources/images/workflow.png",
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:progress',
+                        permission: 'progress',
                         tooltip: '查看当前流程',
                         handler: 'onViewCurrentProcess',
                         getClass: function (v, meta, record) {
@@ -116,7 +116,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                         }
                     },
                     {
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:delete',
+                        permission: 'delete',
                         tooltip: '删除',
                         handler: 'onDelete',
                         getClass: function (v, meta, record) {
@@ -140,12 +140,12 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
                             }
                             return '启动';
                         },
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:control',
+                        permission: 'control',
                         handler: 'onWorkFlowStart'
                     },
                     {
                         iconCls: 'iconfont icon-attachment-column',
-                        permission: 'oa:workFlowBizModule:sealApplyMenu:attachment',
+                        permission: 'attachment',
                         tooltip: '附件管理',
                         handler: 'onAttachmentManage'
                     }
