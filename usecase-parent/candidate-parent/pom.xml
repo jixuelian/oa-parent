@@ -20,7 +20,7 @@
         <module>oa-usecase-candidate-entities</module>
         <module>oa-usecase-candidate-extjs</module>
         <module>oa-usecase-candidate-rest</module>
-        <module>oa-usecase-candidate-web</module>
+        <!--<module>oa-usecase-candidate-web</module>-->
     </modules>
 
     <dependencyManagement>

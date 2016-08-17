@@ -21,7 +21,7 @@
         <module>oa-workflow-sealapply-entities</module>
         <module>oa-workflow-sealapply-extjs</module>
         <module>oa-workflow-sealapply-rest</module>
-        <module>oa-workflow-sealapply-web</module>
+        <!--<module>oa-workflow-sealapply-web</module>-->
     </modules>
     <dependencyManagement>
         <dependencies>

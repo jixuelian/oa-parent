@@ -21,7 +21,7 @@
         <module>oa-workflow-meetingapply-entities</module>
         <module>oa-workflow-meetingapply-extjs</module>
         <module>oa-workflow-meetingapply-rest</module>
-        <module>oa-workflow-meetingapply-web</module>
+        <!--<module>oa-workflow-meetingapply-web</module>-->
     </modules>
 
     <dependencyManagement>

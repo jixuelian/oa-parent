@@ -20,7 +20,7 @@
         <module>oa-system-meetingroom-entities</module>
         <module>oa-system-meetingroom-extjs</module>
         <module>oa-system-meetingroom-rest</module>
-        <module>oa-system-meetingroom-web</module>
+        <!--<module>oa-system-meetingroom-web</module>-->
     </modules>
 
     <dependencyManagement>
