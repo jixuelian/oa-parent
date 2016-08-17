@@ -24,7 +24,7 @@ public class OADictBeanServiceImpl extends ShiroGenericBizServiceImpl<IOADictBea
 
         maxValue=maxValue+1;
 
-        entity.setValue(maxValue.toString());
+        entity.setValue(maxValue);
 
         return super.saveEntity(entity);
     }
