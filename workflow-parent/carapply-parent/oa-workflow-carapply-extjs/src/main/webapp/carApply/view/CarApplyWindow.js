@@ -8,7 +8,8 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
         'kalix.view.components.common.TableFormPanel',
         'kalix.view.components.common.TableFormField',
         'kalix.controller.BaseWindowController',
-        'kalix.view.components.common.TableFormDateTimeField'
+        'kalix.view.components.common.TableFormDateTimeField',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.carApplyWindow',
     xtype: "carApplyWindow",
@@ -39,7 +40,9 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
                     colspan: 2,
                     items: [
                         {
-                            xtype: 'tableFormField',
+                            xtype: 'userOrgComboBox',
+                            valueField: 'orgName',
+                            displayField: 'orgName',
                             bind: {
                                 value: '{rec.department}'
                             }

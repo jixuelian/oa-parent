@@ -8,7 +8,8 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
         'kalix.controller.BaseWindowController',
         'kalix.view.components.common.TableFormDateTimeField',
         'kalix.view.components.common.TableFormPanel',
-        'kalix.view.components.common.TableFormField'
+        'kalix.view.components.common.TableFormField',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.recruitApplyWindow',
     xtype: "recruitApplyWindow",
@@ -39,7 +40,9 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
                     colspan: 2,
                     items: [
                         {
-                            xtype: 'tableFormField',
+                            xtype: 'userOrgComboBox',
+                            valueField: 'orgName',
+                            displayField: 'orgName',
                             bind: {
                                 value: '{rec.department}'
                             }

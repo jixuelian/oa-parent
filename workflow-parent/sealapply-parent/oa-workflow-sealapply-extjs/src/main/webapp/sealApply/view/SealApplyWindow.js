@@ -9,7 +9,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyWindow', {
         'kalix.view.components.common.TableFormRadioGroup',
         'kalix.view.components.common.TableFormField',
         'kalix.controller.BaseWindowController',
-        'kalix.admin.user.component.UserOrgComboBox',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.sealApplyWindow',
     xtype: "sealApplyWindow",
@@ -41,8 +41,8 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyWindow', {
                         {
                             //xtype: 'tableFormField',
                             xtype: 'userOrgComboBox',
-                            valueField: 'departmentId',
-                            displayField: 'departmentName',
+                            valueField: 'orgName',
+                            displayField: 'orgName',
                             bind: {
                                 value: '{rec.department}'
                             }
