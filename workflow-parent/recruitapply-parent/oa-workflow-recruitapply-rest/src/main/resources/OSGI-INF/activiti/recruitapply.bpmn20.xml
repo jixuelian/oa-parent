@@ -11,16 +11,17 @@
                                     class="com.kalix.middleware.workflow.engine.listener.MessageEventListener"></activiti:eventListener>
         </extensionElements>
         <startEvent id="startevent1" name="Start"></startEvent>
-        <userTask id="depUser" name="申报部门审批" activiti:candidateGroups="正处级领导" activiti:formKey="audit.form">
-            <documentation>申请部门领导审核</documentation>
+        <userTask id="depUser" name="申报部门上级领导审批" activiti:formKey="audit.form">
+            <documentation>申请部门上级领导审核</documentation>
             <extensionElements>
+                <activiti:taskListener event="create" class="com.kalix.middleware.workflow.engine.listener.LeaderListener"/>
                 <activiti:formProperty id="accepted" name="判断环节" type="boolean"
                                        variable="accepted"></activiti:formProperty>
             </extensionElements>
         </userTask>
         <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
         <sequenceFlow id="flow3" sourceRef="depUser" targetRef="exclusivegateway1"></sequenceFlow>
-        <userTask id="manpower" name="人力处长审批" activiti:candidateGroups="正处级领导" activiti:formKey="audit.form"></userTask>
+        <userTask id="manpower" name="人力处长审批" activiti:candidateGroups="人力处长" activiti:formKey="audit.form"></userTask>
         <sequenceFlow id="flow4" name="同意" sourceRef="exclusivegateway1" targetRef="manpower">
             <conditionExpression xsi:type="tFormalExpression"><![CDATA[${accepted}]]></conditionExpression>
         </sequenceFlow>

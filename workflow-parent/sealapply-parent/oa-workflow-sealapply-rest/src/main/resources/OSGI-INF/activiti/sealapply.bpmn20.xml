@@ -11,8 +11,11 @@
       <!--<activiti:eventListener delegateExpression="${testEventListener}" events="ENTITY_CREATED" entityType="task" />-->
     </extensionElements>
     <startEvent id="startevent1" name="Start" activiti:formKey="start.form"></startEvent>
-    <userTask id="departmentHead" name="部门负责人审批" activiti:candidateGroups="部门负责人" activiti:formKey="audit.form">
-      <documentation>印章使用申请流程</documentation>
+    <userTask id="departmentHead" name="申报部门上级领导审批" activiti:formKey="audit.form">
+      <documentation>申报部门上级领导审批</documentation>
+      <extensionElements>
+        <activiti:taskListener event="create" class="com.kalix.middleware.workflow.engine.listener.LeaderListener"/>
+      </extensionElements>
     </userTask>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow3" sourceRef="departmentHead" targetRef="exclusivegateway1"></sequenceFlow>

@@ -1,18 +1,45 @@
 # workflow-parent
 
-##### 工作流工程的父工程
-  * carapply-parent 车辆使用申请工作流
-    * [carapply-parent](oa-parent/workflow-parent/carapply-parent/README.md)
-  * employapply-parent 入职审批工作流
-    * [employapply-parent](oa-parent/workflow-parent/employapply-parent/README.md)
-  * meetingapply-parent 会议室使用申请工作流
-    * [meetingapply-parent](oa-parent/workflow-parent/meetingapply-parent/README.md)
-  * recruitapply-parent 招聘申请工作流
-    * [recruitapply-parent](oa-parent/workflow-parent/recruitapply-parent/README.md)
-  * sealapply-parent 印章使用申请工作流
-    * [sealapply-parent](oa-parent/workflow-parent/sealapply-parent/README.md)
+## 工作流工程的父工程
+### carapply-parent 车辆使用申请工作流
+  [carapply-parent](oa-parent/workflow-parent/carapply-parent/README.md)
+  * 流程审批职位列表
+    * 上级领导
+    * 校务部副部长
+    * 副校级领导
+    * 校党委书记
+### employapply-parent 入职审批工作流
+  [employapply-parent](oa-parent/workflow-parent/employapply-parent/README.md)
+* 流程审批职位列表
+  * 分院领导
+  * 校领导
+  * 人力领导
+### meetingapply-parent 会议室使用申请工作流
+  [meetingapply-parent](oa-parent/workflow-parent/meetingapply-parent/README.md)
+* 流程审批职位列表
+  * 校务部文秘综合干事
+  * 校务部行政事务办主管
+  * 校务部副部长
+  * 发起部门会议纪要
+### recruitapply-parent 招聘申请工作流
+  [recruitapply-parent](oa-parent/workflow-parent/recruitapply-parent/README.md)
+* 流程审批职位列表
+  * 上级领导
+  * 人力处长
+### sealapply-parent 印章使用申请工作流
+  [sealapply-parent](oa-parent/workflow-parent/sealapply-parent/README.md)
+* 流程审批职位列表
+  * 上级领导
+  * 分公司负责人
+  * 法律顾问
+  * 总经理
+  * 印章专管员
 
-# 注意事项
+## 注意事项
+  * 上级领导说明
+  当前申请人同级别的职位下的名称为“上级领导”的职位。
+  例如：用车申请流程中用户A所处机构为“行政事务办公室”，该用户提请用车流程，系统自动在“行政事务办公室”机构下
+  查找职位名称为“上级领导”的全部用户作为下一步的审批人员。
   * 工作流的配置文件xml中的含义
   “name”是工作流图中的显示名称
   “activiti:candidateGroups”是角色组的名称或者是角色的名称
