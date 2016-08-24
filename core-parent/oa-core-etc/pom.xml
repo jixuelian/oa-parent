@@ -13,5 +13,9 @@
     <artifactId>oa-core-etc</artifactId>
     <name>Kalix OA Core ETC</name>
     <description>ETC</description>
-    <packaging>pom</packaging>
+    <packaging>bundle</packaging>
+
+    <properties>
+        <bundle.symbolicName>com.kalix.oa.core.etc</bundle.symbolicName>
+    </properties>
 </project>

@@ -13,7 +13,6 @@
     <artifactId>core-parent</artifactId>
     <name>Kalix OA Core Parent</name>
     <modules>
-        <module>oa-core-web</module>
         <module>oa-core-extjs</module>
         <module>oa-core-etc</module>
     </modules>
