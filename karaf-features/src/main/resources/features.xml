@@ -123,10 +123,10 @@
 
     <feature name="oa-config">
         <configfile finalname="/etc/ConfigOAApp.cfg" override="true">
-            mvn:com.kalix.common.core/common-core-etc/${project.version}/cfg/ConfigOAApp
+            mvn:com.kalix.oa.core/oa-core-etc/${project.version}/cfg/ConfigOAApp
         </configfile>
         <configfile finalname="/etc/ConfigOADict.cfg" override="true">
-            mvn:com.kalix.common.core/common-core-etc/${project.version}/cfg/ConfigOADict
+            mvn:com.kalix.oa.core/oa-core-etc/${project.version}/cfg/ConfigOADict
         </configfile>
     </feature>
 </features>
