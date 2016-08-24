@@ -47,7 +47,7 @@
         <sequenceFlow id="flow10" name="不同意" sourceRef="exclusivegateway3" targetRef="endevent2">
             <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!accepted}]]></conditionExpression>
         </sequenceFlow>
-        <userTask id="launchManagerUser" name="发起部门会议纪要审批" activiti:candidateGroups="发起部门会议纪要审批"
+        <userTask id="launchManagerUser" name="发起部门会议纪要审批" activiti:candidateGroups="发起部门会议纪要"
                   activiti:formKey="audit.form"></userTask>
         <sequenceFlow id="flow11" name="同意" sourceRef="exclusivegateway3" targetRef="launchManagerUser">
             <conditionExpression xsi:type="tFormalExpression"><![CDATA[${accepted}]]></conditionExpression>

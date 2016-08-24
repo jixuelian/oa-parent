@@ -12,7 +12,8 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyWindow', {
         'kalix.view.components.common.TableFormRadioGroup',
         'kalix.controller.BaseWindowController',
         'kalix.view.components.common.TableFormDateTimeField',
-        'kalix.system.meetingroom.component.MeetingroomComboBox'
+        'kalix.system.meetingroom.component.MeetingroomComboBox',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.meetingApplyWindow',
     xtype: "meetingApplyWindow",
@@ -43,7 +44,9 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyWindow', {
                     colspan: 2,
                     items: [
                         {
-                            xtype: 'tableFormField',
+                            xtype: 'userOrgComboBox',
+                            valueField: 'orgName',
+                            displayField: 'orgName',
                             bind: {
                                 value: '{rec.department}'
                             }

@@ -23,15 +23,6 @@ Ext.define('kalix.workflow.sealApply.view.SealApplySearchForm', {
             labelWidth: 60,
             width: 200,
             name: 'createBy'
-        },
-        {
-            xtype: 'datefield',
-            format: 'Y-m-d',
-            fieldLabel: '申请时间',
-            labelAlign: 'right',
-            labelWidth: 60,
-            width: 200,
-            name: 'creationDate:begin:gt'
         }
     ]
 });
