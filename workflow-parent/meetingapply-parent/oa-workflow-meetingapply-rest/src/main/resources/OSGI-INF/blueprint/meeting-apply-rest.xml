@@ -49,7 +49,7 @@
               produces="application/json;charset=utf-8">
             <get id="route-startProcessmeetingApply" uri="/startProcess" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Start Process of meetingApply</description>
-                <to uri="bean:meetingApplyService?method=startProcess(${header.id})"/>
+                <to uri="bean:meetingApplyService?method=startProcess(${header.id},${header.startOrgId})"/>
             </get>
             <get id="route-completeTaskMeetingApply" uri="/completeTask" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Complete Task of meetingApply</description>

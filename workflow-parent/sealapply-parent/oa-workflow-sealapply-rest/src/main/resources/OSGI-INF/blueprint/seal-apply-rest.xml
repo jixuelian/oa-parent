@@ -41,7 +41,7 @@
               produces="application/json;charset=utf-8">
             <get id="route-startProcessSealApply" uri="/startProcess" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Start Process of SealApply</description>
-                <to uri="bean:sealApplyService?method=startProcess(${header.id})"/>
+                <to uri="bean:sealApplyService?method=startProcess(${header.id},${header.startOrgId})"/>
             </get>
             <get id="route-completeTaskSealApply" uri="/completeTask" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Complete Task of SealApply</description>

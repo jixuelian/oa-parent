@@ -41,7 +41,7 @@
               produces="application/json;charset=utf-8">
             <get id="route-startProcessemployApply" uri="/startProcess" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Start Process of employApply</description>
-                <to uri="bean:employApplyService?method=startProcess(${header.id})"/>
+                <to uri="bean:employApplyService?method=startProcess(${header.id},${header.startOrgId})"/>
             </get>
             <get id="route-completeTaskEmployApply" uri="/completeTask" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Complete Task of employApply</description>
