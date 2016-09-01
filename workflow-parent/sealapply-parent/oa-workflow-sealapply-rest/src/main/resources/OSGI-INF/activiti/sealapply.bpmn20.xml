@@ -10,7 +10,12 @@
       <activiti:eventListener class="com.kalix.middleware.workflow.engine.listener.MessageEventListener" entityType="task" events="TASK_ASSIGNED" />
       <!--<activiti:eventListener delegateExpression="${testEventListener}" events="ENTITY_CREATED" entityType="task" />-->
     </extensionElements>
-    <startEvent id="startevent1" name="Start" activiti:formKey="start.form"></startEvent>
+    <startEvent id="startevent1" name="Start" activiti:formKey="start.form">
+      <extensionElements>
+        <activiti:formProperty id="startOrgId" name="申请人的组织机构id" type="string"
+                               variable="startOrgId"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
     <userTask id="departmentHead" name="申报部门上级领导审批" activiti:formKey="audit.form">
       <documentation>申报部门上级领导审批</documentation>
       <extensionElements>

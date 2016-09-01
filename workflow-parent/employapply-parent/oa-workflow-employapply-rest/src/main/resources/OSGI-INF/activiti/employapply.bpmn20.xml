@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/person">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/person">
     <process id="employapply" name="入职审批申请流程" isExecutable="true" activiti:type="">
         <documentation>入职审批申请流程</documentation>
         <extensionElements>
             <activiti:eventListener events="TASK_CREATED,TASK_COMPLETED" entityType="task" class="com.kalix.middleware.workflow.engine.listener.MessageEventListener"></activiti:eventListener>
         </extensionElements>
-        <startEvent id="startevent1" name="启动审批"></startEvent>
+        <startEvent id="startevent1" name="启动审批">
+            <extensionElements>
+                <activiti:formProperty id="startOrgId" name="申请人的组织机构id" type="string"
+                                       variable="startOrgId"></activiti:formProperty>
+            </extensionElements>
+        </startEvent>
         <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
         <userTask id="branchSchoolLeader" name="分院领导审批" activiti:candidateGroups="分院领导" activiti:formKey="audit.form">
             <documentation>分院领导审批</documentation>
