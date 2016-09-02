@@ -47,8 +47,8 @@ Ext.define('kalix.workflow.employApply.view.EmployApplyGrid', {
                 renderer: null
             },
             {
-                text: '部门',
-                dataIndex: 'department'
+                text: '申请部门',
+                dataIndex: 'orgName'
             },
             {
                 text: '姓名',

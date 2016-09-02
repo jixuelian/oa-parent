@@ -39,7 +39,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyGrid', {
             },
             {
                 text: '申请部门',
-                dataIndex: 'department'
+                dataIndex: 'orgName'
             },
 
             {

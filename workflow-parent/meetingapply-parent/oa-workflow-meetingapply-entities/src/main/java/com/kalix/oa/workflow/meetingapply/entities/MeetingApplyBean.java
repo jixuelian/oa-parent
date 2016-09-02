@@ -15,8 +15,6 @@ import java.util.Date;
 @Entity
 @Table(name = "oa_workflow_meeting")
 public class MeetingApplyBean extends WorkflowEntity {
-    //申请部门
-    private String department;
     //会议地点
     private Integer meetingroomId;
     //会议地点
@@ -56,14 +54,6 @@ public class MeetingApplyBean extends WorkflowEntity {
     private String schoolUser;
     //发起部门会议纪要审批人
     private String launchManagerUser;
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 
     public Integer getMeetingroomId() {
         return meetingroomId;

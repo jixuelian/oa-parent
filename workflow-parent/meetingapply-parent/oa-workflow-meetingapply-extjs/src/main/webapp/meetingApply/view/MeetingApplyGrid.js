@@ -41,7 +41,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
 
             {
                 text: '申请部门',
-                dataIndex: 'department'
+                dataIndex: 'orgName'
             },
             {
                 text: '申请时间',

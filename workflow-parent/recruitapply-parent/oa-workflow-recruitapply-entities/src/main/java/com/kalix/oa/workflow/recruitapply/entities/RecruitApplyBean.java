@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Table(name = "oa_workflow_recruit")
 public class RecruitApplyBean extends WorkflowEntity {
     private String personType;// 人员类型
-    private String department;// 申请部门
     private String reason;// 需求原因
     private String positionName;//职位名称
     private Integer recruitCount;// 拟聘人数
@@ -35,14 +34,6 @@ public class RecruitApplyBean extends WorkflowEntity {
 
     public void setPersonType(String personType) {
         this.personType = personType;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
     }
 
     public String getReson() {

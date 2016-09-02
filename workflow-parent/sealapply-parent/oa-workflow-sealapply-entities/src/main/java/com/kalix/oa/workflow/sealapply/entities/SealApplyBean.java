@@ -12,8 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "oa_workflow_sealapply")
 public class SealApplyBean extends WorkflowEntity {
-    //申请部门
-    private String department;
     //用印数
     private Integer usageCount;
     //印章类别
@@ -30,17 +28,8 @@ public class SealApplyBean extends WorkflowEntity {
     private String sealAdministrator;
     //审批修改
     private String modify;
-
     //备注
     private String remark;
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 
     public Integer getUsageCount() {
         return usageCount;
