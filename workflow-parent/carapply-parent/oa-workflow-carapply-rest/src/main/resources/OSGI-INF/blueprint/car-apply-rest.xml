@@ -41,7 +41,7 @@
               produces="application/json;charset=utf-8">
             <get id="route-startProcesscarApply" uri="/startProcess" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Start Process of carApply</description>
-                <to uri="bean:carApplyService?method=startProcess(${header.id},${header.startOrgId})"/>
+                <to uri="bean:carApplyService?method=startProcess(${header.id})"/>
             </get>
             <get id="route-completeTaskCarApply" uri="/completeTask" outType="com.kalix.framework.core.api.persistence.JsonStatus">
                 <description>Complete Task of carApply</description>
