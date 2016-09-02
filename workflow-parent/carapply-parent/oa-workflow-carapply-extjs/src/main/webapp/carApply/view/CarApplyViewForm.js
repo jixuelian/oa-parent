@@ -27,7 +27,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyViewForm', {
                     xtype: 'tableFormField',
                     readOnly: true,
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgName}'
                     }
                 }
             ]
