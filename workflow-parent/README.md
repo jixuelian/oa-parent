@@ -11,9 +11,9 @@
 ## employapply-parent 入职审批工作流
   [employapply-parent](oa-parent/workflow-parent/employapply-parent/README.md)
   * 流程审批职位列表
-    * 分院领导
-    * 校领导
-    * 人力领导
+    * 上级领导
+    * 董事长
+    * 人力资源开发与管理中心副主任
 
 ## meetingapply-parent 会议室使用申请工作流
   [meetingapply-parent](oa-parent/workflow-parent/meetingapply-parent/README.md)
@@ -27,7 +27,7 @@
   [recruitapply-parent](oa-parent/workflow-parent/recruitapply-parent/README.md)
   * 流程审批职位列表
     * 上级领导
-    * 人力处长
+    * 人力资源开发与管理中心副主任
 
 ## sealapply-parent 印章使用申请工作流
   [sealapply-parent](oa-parent/workflow-parent/sealapply-parent/README.md)
