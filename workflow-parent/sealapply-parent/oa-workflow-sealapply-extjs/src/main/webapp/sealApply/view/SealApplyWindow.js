@@ -39,13 +39,10 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyWindow', {
                 {
                     items: [
                         {
-                            //xtype: 'tableFormField',
-                            xtype: 'userOrgComboBox',
-                            valueField: 'orgName',
-                            displayField: 'orgName',
-                            bind: {
-                                value: '{rec.department}'
-                            }
+                          xtype: 'userOrgComboBox',
+                          bind: {
+                            value: '{rec.orgId}'
+                          }
                         }
                     ]
                 },

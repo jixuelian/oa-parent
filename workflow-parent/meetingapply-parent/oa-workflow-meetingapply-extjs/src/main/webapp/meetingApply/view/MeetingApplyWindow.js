@@ -44,12 +44,10 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyWindow', {
                     colspan: 2,
                     items: [
                         {
-                            xtype: 'userOrgComboBox',
-                            valueField: 'orgName',
-                            displayField: 'orgName',
-                            bind: {
-                                value: '{rec.department}'
-                            }
+                          xtype: 'userOrgComboBox',
+                          bind: {
+                            value: '{rec.orgId}'
+                          }
                         }
                     ]
                 },

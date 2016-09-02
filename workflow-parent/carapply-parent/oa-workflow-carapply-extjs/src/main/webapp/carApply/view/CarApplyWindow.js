@@ -41,10 +41,8 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
                     items: [
                         {
                             xtype: 'userOrgComboBox',
-                            valueField: 'orgName',
-                            displayField: 'orgName',
                             bind: {
-                                value: '{rec.department}'
+                                value: '{rec.orgId}'
                             }
                         }
                     ]
