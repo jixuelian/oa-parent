@@ -52,7 +52,7 @@ public class LectureBeanServiceImpl extends ShiroGenericBizServiceImpl<ILectureB
     protected String getNativeQueryStr() {
         return "select b.id, " +
                 "a.personcategory, " +
-                "a.department, " +
+                "a.orgId, a.orgName," +
                 "a.xm, " +
                 "a.sex, " +
                 "a.age, " +

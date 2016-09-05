@@ -27,7 +27,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyViewForm', {
                     xtype: 'tableFormField',
                     readOnly: true,
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgName}'
                     }
                 }
             ]
@@ -72,7 +72,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyViewForm', {
                     xtype: 'tableFormField',
                     readOnly: true,
                     bind: {
-                        value: '{rec.allocationCout}'
+                        value: '{rec.allocationCount}'
                     }
                 }
             ]

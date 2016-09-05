@@ -5,6 +5,7 @@
 Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
+        'kalix.controller.BaseWorkFlowWindowController',
         'kalix.view.components.common.TableFormPanel',
         'kalix.view.components.common.TableFormField',
         'kalix.controller.BaseWindowController',
@@ -14,7 +15,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
     alias: 'widget.carApplyWindow',
     xtype: "carApplyWindow",
     controller: {
-        type: 'baseWindowController',
+        type: 'baseWorkFlowWindowController',
         storeId: 'carApplyStore'
     },
     width: 900,
@@ -97,12 +98,12 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
                 {
                     colspan: 3,
                     layout: {
-                        type: 'hbox',
+                        type: 'hbox'
                     },
                     customStyle: true,
                     bodyStyle: 'padding:5px 0px 0px 0px;',
                     defaults: {
-                        width: 210,
+                        width: 210
                     },
                     items: [
                         {
@@ -114,7 +115,7 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
                         {
                             html: '至',
                             width: 15,
-                            bodyStyle: 'font-size:15px;border:0px;padding:5px 0 0 0;',
+                            bodyStyle: 'font-size:15px;border:0px;padding:5px 0 0 0;'
                         },
                         {
                             xtype: 'tableFormDateTimeField',
@@ -180,7 +181,10 @@ Ext.define('kalix.workflow.carApply.view.CarApplyWindow', {
                     items: [
                         {
                             xtype: 'tableFormField',
-                            readOnly: true
+                            readOnly: true,
+                            bind: {
+                                value: '{rec.createBy}'
+                            }
                         }
                     ]
                 },

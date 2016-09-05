@@ -82,7 +82,7 @@ public class EmployApplyBeanServiceImpl extends WorkflowGenericBizServiceImpl<IE
      */
     @Override
     protected String getNativeQueryStr() {
-        return "select a.id,a.personCategory,a.department,a.xm,a.sex,a.age,a.tel,a.position," +
+        return "select a.id,a.personCategory,a.orgId,a.orgName,a.xm,a.sex,a.age,a.tel,a.position," +
                 "b.id as employApplyWorkflowId," +
                 "b.processInstanceId," +
                 "b.currentNode," +

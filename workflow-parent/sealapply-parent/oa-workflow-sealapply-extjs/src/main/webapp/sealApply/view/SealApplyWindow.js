@@ -5,6 +5,7 @@
 Ext.define('kalix.workflow.sealApply.view.SealApplyWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
+        'kalix.controller.BaseWorkFlowWindowController',
         'kalix.view.components.common.TableFormPanel',
         'kalix.view.components.common.TableFormRadioGroup',
         'kalix.view.components.common.TableFormField',
@@ -14,7 +15,7 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyWindow', {
     alias: 'widget.sealApplyWindow',
     xtype: "sealApplyWindow",
     controller: {
-        type: 'baseWindowController',
+        type: 'baseWorkFlowWindowController',
         storeId: 'sealApplyStore'
     },
     width: 840,

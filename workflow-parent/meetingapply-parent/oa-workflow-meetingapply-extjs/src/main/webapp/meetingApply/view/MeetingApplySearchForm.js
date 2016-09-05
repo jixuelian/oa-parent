@@ -15,7 +15,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplySearchForm', {
             labelAlign: 'right',
             labelWidth: 60,
             width: 200,
-            name: 'department'
+            name: 'orgName'
         }, {
             xtype: 'textfield',
             fieldLabel: '经办人',

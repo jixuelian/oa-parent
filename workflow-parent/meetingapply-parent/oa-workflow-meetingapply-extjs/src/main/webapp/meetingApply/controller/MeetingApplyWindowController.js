@@ -8,7 +8,7 @@ Ext.define('kalix.workflow.meetingApply.controller.MeetingApplyWindowController'
         var viewModel = this.getViewModel();
         var model = viewModel.get('rec');
         //model.set('updateDate',new Date());
-        if(model.data.department == null){
+        if(model.data.orgId == null){
             Ext.Msg.alert(CONFIG.ALTER_TITLE_SUCCESS, '请输入申请部门');
             return;
         }

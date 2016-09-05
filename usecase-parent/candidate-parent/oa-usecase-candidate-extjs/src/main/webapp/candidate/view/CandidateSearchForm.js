@@ -27,7 +27,7 @@ Ext.define('kalix.usecase.candidate.view.CandidateSearchForm', {
             labelAlign: 'right',
             labelWidth: 60,
             width: 200,
-            name: 'department'
+            name: 'orgName'
         },
         {
             xtype: 'textfield',

@@ -7,7 +7,8 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyModifyForm', {
     requires: [
         'kalix.view.components.common.TableFormField',
         'Ext.ux.DateTimeField',
-        'kalix.admin.dict.component.DictCombobox'
+        'kalix.admin.dict.component.DictCombobox',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.sealApplyViewForm',
     xtype: "sealApplyModifyForm",
@@ -24,9 +25,9 @@ Ext.define('kalix.workflow.sealApply.view.SealApplyModifyForm', {
         {
             items: [
                 {
-                    xtype: 'tableFormField',
+                    xtype: 'userOrgComboBox',
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgId}'
                     }
                 }
             ]

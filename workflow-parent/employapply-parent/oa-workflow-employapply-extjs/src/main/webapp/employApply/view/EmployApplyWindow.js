@@ -5,14 +5,14 @@
 Ext.define('kalix.workflow.employApply.view.EmployApplyWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
-        'kalix.controller.BaseWindowController',
+        'kalix.controller.BaseWorkFlowWindowController',
         'Ext.ux.DateTimeField'
     ],
     alias: 'widget.employApplyWindow',
     xtype: "employApplyWindow",
     width: 400,
     controller: {
-        type: 'baseWindowController',
+        type: 'baseWorkFlowWindowController',
         storeId: 'employApplyStore'
     },
     items: [

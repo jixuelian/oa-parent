@@ -8,7 +8,8 @@ Ext.define('kalix.usecase.candidate.view.CandidateWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
         'kalix.controller.BaseWindowController',
-        'kalix.oa.oADict.component.OADictCombobox'
+        'kalix.oa.oADict.component.OADictCombobox',
+        'kalix.admin.user.component.UserOrgComboBox'
     ],
     alias: 'widget.candidateWindow',
     controller: {
@@ -33,8 +34,9 @@ Ext.define('kalix.usecase.candidate.view.CandidateWindow', {
                 {
                     fieldLabel: '所在部门',
                     allowBlank: false,
+                    xtype: 'userOrgComboBox',
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgId}'
                     }
                 },
                 {

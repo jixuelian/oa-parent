@@ -57,7 +57,7 @@ public class InterviewBeanServiceImpl extends ShiroGenericBizServiceImpl<IInterv
     protected String getNativeQueryStr() {
         return "select b.id," +
                 "a.personcategory," +
-                "a.department," +
+                "a.orgId, orgName," +
                 "a.xm," +
                 "a.sex," +
                 "a.age," +

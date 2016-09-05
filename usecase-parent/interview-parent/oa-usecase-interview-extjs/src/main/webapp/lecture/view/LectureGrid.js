@@ -49,8 +49,10 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
             },
             {
                 text: '所在部门',
-                dataIndex: 'department'
+                hidden:true,
+                dataIndex: 'orgId'
             },
+
             {
                 text: '试讲题目',
                 dataIndex: 'subject'

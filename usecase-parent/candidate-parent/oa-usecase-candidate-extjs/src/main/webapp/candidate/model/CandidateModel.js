@@ -14,9 +14,6 @@ Ext.define('kalix.usecase.candidate.model.CandidateModel', {
             name: 'personCategory'
         },
         {
-            name: 'department'
-        },
-        {
             name: 'xm'
         },
         {

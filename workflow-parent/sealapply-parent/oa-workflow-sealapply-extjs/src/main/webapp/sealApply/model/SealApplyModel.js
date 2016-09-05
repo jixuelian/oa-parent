@@ -5,8 +5,7 @@
 Ext.define('kalix.workflow.sealApply.model.SealApplyModel', {
     extend: 'kalix.model.WorkflowBaseModel',
     fields: [
-        {name: 'department'},
-        {name: 'usageCount'},
+        {name: 'usageCount',validators: [{type: 'presence'}]},
         {name: 'sealType', defaultValue: '0', type: 'string'},
         {name: 'departmentHead'},
         {name: 'filialeHead'},

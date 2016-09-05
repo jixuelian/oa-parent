@@ -5,7 +5,7 @@
 Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
     extend: 'kalix.view.components.common.BaseWindow',
     requires: [
-        'kalix.controller.BaseWindowController',
+        'kalix.controller.BaseWorkFlowWindowController',
         'kalix.view.components.common.TableFormDateTimeField',
         'kalix.view.components.common.TableFormPanel',
         'kalix.view.components.common.TableFormField',
@@ -14,7 +14,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
     alias: 'widget.recruitApplyWindow',
     xtype: "recruitApplyWindow",
     controller: {
-        type: 'baseWindowController',
+        type: 'baseWorkFlowWindowController',
         storeId: 'recruitApplyStore'
     },
     width: 900,
@@ -87,7 +87,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
                         {
                             xtype: 'tableFormField',
                             bind: {
-                                value: '{rec.allocationCout}'
+                                value: '{rec.allocationCount}'
                             }
                         }
                     ]
@@ -168,7 +168,7 @@ Ext.define('kalix.workflow.recruitApply.view.RecruitApplyWindow', {
                     ]
                 },
                 {
-                    html: '任职基本素质条件',
+                    html: '任职基本条件',
                     required: true
                 },
                 {

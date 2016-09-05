@@ -32,7 +32,7 @@ Ext.define('kalix.usecase.candidate.view.CandidateViewWindow', {
                     fieldLabel: '所在部门',
                     allowBlank: false,
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgName}'
                     }
                 },
                 {

@@ -36,12 +36,12 @@ public class RecruitApplyBean extends WorkflowEntity {
         this.personType = personType;
     }
 
-    public String getReson() {
+    public String getReason() {
         return reason;
     }
 
-    public void setReson(String reson) {
-        this.reason = reson;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public String getPositionName() {

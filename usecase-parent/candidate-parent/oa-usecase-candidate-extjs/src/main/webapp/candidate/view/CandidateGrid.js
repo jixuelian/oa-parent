@@ -48,7 +48,7 @@ Ext.define('kalix.usecase.candidate.view.CandidateGrid', {
             },
             {
                 text: '所在部门',
-                dataIndex: 'department'
+                dataIndex: 'orgName'
             },
             {
                 text: '应聘岗位',

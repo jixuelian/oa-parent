@@ -30,7 +30,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyViewForm', {
                     xtype: 'tableFormField',
                     readOnly: true,
                     bind: {
-                        value: '{rec.department}'
+                        value: '{rec.orgName}'
                     }
                 }
             ]
