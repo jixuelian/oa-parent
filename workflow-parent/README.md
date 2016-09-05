@@ -4,9 +4,9 @@
   [carapply-parent](oa-parent/workflow-parent/carapply-parent/README.md)
   * 流程审批职位列表
     * 上级领导
-    * 校务部副部长
-    * 副校级领导
-    * 校党委书记
+    * 董事会机构-校务部副部长
+    * 董事会机构-副校级领导
+    * 董事会机构-校党委书记
 
 ## employapply-parent 入职审批工作流
   [employapply-parent](oa-parent/workflow-parent/employapply-parent/README.md)
