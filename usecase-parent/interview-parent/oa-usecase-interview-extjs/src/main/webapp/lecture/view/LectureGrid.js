@@ -78,13 +78,13 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
                 items: [
                     {
                         iconCls: 'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
                         iconCls: 'iconfont icon-edit-column',
-                        permission: '',
+                        permission: 'edit',
                         tooltip: '编辑',
                         handler: 'onEdit'
                         //getClass: function (v, meta, record) {
@@ -96,7 +96,7 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
                     },
                     {
                         iconCls: 'iconfont icon-delete',
-                        permission: '',
+                        permission: 'delete',
                         tooltip: '删除',
                         handler: 'onDelete'
                     }
@@ -112,7 +112,7 @@ Ext.define('kalix.usecase.lecture.view.LectureGrid', {
                 xtype: 'button',
                 //todo change permission
                 iconCls:'iconfont icon-add',
-                permission: '',
+                permission: 'add',
                 handler: 'onAdd'
             }
         ]

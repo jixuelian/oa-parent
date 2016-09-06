@@ -98,14 +98,14 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                 items: [
                     {
                         iconCls:'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
                         iconCls:'iconfont icon-edit-column',
-                        permission: '',
-                        tooltip: '面试',
+                        permission: 'edit',
+                        tooltip: '编辑',
                         handler: 'onEdit'
                         //getClass: function (v, meta, record) {
                         //    if (record.data.personCategory == 3 || record.data.passFirst == true) {
@@ -128,7 +128,7 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                     //},
                     {
                         iconCls:'iconfont icon-delete',
-                        permission: '',
+                        permission: 'delete',
                         tooltip: '删除',
                         handler: 'onDelete'
                     }
@@ -144,7 +144,7 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                 xtype: 'button',
                 //todo change permission
                 iconCls:'iconfont icon-add',
-                permission: '',
+                permission: 'one',
                 handler: 'onInterviewOne'
             },
             {
@@ -152,7 +152,7 @@ Ext.define('kalix.usecase.interview.view.InterviewGrid', {
                 xtype: 'button',
                 //todo change permission
                 iconCls:'iconfont icon-add',
-                permission: '',
+                permission: 'two',
                 handler: 'onInterviewTwo'
             }
         ]
