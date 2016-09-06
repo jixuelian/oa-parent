@@ -63,18 +63,18 @@ Ext.define('kalix.system.meetingroom.view.MeetingroomGrid', {
                 items: [
                     {
                         iconCls:'iconfont icon-view-column',
-                        permission: '',
+                        permission: 'view',
                         tooltip: '查看',
                         handler: 'onView'
                     },
                     {
                         iconCls:'iconfont icon-edit-column',
-                        permission: '',
+                        permission: 'edit',
                         tooltip: '编辑',
                         handler: 'onEdit'
                     }, {
                         iconCls:'iconfont icon-delete',
-                        permission: '',
+                        permission: 'delete',
                         tooltip: '删除',
                         handler: 'onDelete'
                     }
@@ -90,7 +90,7 @@ Ext.define('kalix.system.meetingroom.view.MeetingroomGrid', {
                 xtype: 'button',
                 //todo change permission
                 iconCls:'iconfont icon-add',
-                permission: '',
+                permission: 'add',
                 handler: 'onAdd'
             }
         ]

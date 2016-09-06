@@ -180,7 +180,7 @@ Ext.define('kalix.workflow.meetingApply.view.MeetingApplyGrid', {
             {
                 text: '会议室占用情况',
                 xtype: 'button',
-                permission: '',
+                permission: 'reservation',
                 iconCls: 'iconfont icon-meeting-room-reservation',
                 handler: 'onReservation'
             }
