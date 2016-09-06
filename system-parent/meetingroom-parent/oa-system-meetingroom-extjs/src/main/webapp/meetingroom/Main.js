@@ -19,8 +19,7 @@ Ext.define('kalix.system.meetingroom.Main', {
             xtype: 'meetingroomGridPanel',
             id: 'meetingroomGridPanel',
             title: '会议室列表',
-            iconCls: 'fa fa-university',
-            margin: 10
+            iconCls: 'fa fa-university'
         }
     ]
 });

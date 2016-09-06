@@ -15,8 +15,7 @@ Ext.define('kalix.workflow.recruitApply.Main', {
         },
         {
             xtype: 'recruitApplyGrid',
-            title: '用工招聘申请列表',
-            margin: 10
+            title: '用工招聘申请列表'
         }
     ]
 });

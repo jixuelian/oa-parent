@@ -19,8 +19,7 @@ Ext.define('kalix.usecase.lecture.Main', {
             xtype: 'lectureGridPanel',
             id: 'lectureGridPanel',
             title: '试讲人员列表',
-            iconCls: 'x-fa fa-cutlery',
-            margin: 10
+            iconCls: 'x-fa fa-cutlery'
         }
     ]
 });

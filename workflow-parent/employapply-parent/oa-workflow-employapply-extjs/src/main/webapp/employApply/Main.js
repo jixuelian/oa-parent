@@ -15,8 +15,7 @@ Ext.define('kalix.workflow.employApply.Main', {
         },
         {
             xtype: 'employApplyGrid',
-            title: '入职申请列表',
-            margin: 10
+            title: '入职申请列表'
         }
     ]
 });

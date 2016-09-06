@@ -15,8 +15,7 @@ Ext.define('kalix.workflow.carApply.Main', {
     },
     {
       xtype: 'carApplyGrid',
-      title: '用车申请列表',
-      margin: 10
+      title: '用车申请列表'
     }
   ]
 });

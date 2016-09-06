@@ -15,8 +15,7 @@ Ext.define('kalix.workflow.meetingApply.Main', {
         },
         {
             xtype: 'meetingApplyGrid',
-            title: '会议室使用申请列表',
-            margin: 10
+            title: '会议室使用申请列表'
         }
     ]
 });

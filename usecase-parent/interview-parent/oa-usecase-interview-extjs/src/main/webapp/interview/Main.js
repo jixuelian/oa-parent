@@ -19,8 +19,7 @@ Ext.define('kalix.usecase.interview.Main', {
             xtype: 'interviewGridPanel',
             id: 'interviewGridPanel',
             title: '面试人员列表',
-            iconCls: 'x-fa fa-cutlery',
-            margin: 10
+            iconCls: 'x-fa fa-cutlery'
         }
     ]
 });

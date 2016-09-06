@@ -15,8 +15,7 @@ Ext.define('kalix.workflow.sealApply.Main', {
         },
         {
             xtype: 'sealApplyGrid',
-            title: '印章申请列表',
-            margin: 10
+            title: '印章申请列表'
         }
     ]
 });

@@ -22,8 +22,7 @@ Ext.define('kalix.app.leave.Main', {
             xtype: 'leaveGridPanel',
             id: 'leaveGridPanel',
             title: '面试人员列表',
-            iconCls: 'x-fa fa-cutlery',
-            margin: 10
+            iconCls: 'x-fa fa-cutlery'
         }
     ]
 });

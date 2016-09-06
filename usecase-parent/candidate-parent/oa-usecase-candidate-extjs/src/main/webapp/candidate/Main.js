@@ -19,8 +19,7 @@ Ext.define('kalix.usecase.candidate.Main', {
             xtype: 'candidateGridPanel',
             id: 'candidateGridPanel',
             title: '应聘人员列表',
-            iconCls: 'x-fa fa-cutlery',
-            margin: 10
+            iconCls: 'x-fa fa-cutlery'
         }
     ]
 });
